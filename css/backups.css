@@ -1,18 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --primary-color: #ffc107; /* Color principal */
+  --dark-color: #222; /* Color oscuro */
+  --light-color: #fff; /* Color claro */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
 
 body,
 html {
-  margin: 0;
-  padding: 0;
   height: 100%;
-  font-family: "Arimo", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: white;
 }
 
-a,
-p,
-h1 {
-  font-family: "Arimo", sans-serif;
+h1,
+h2 {
+  font-family: "Anta", sans-serif;
 }
 
 header {
@@ -59,6 +70,7 @@ header {
 
 .hero-content h1 {
   font-size: 3rem;
+  margin-top: -20px;
   margin-bottom: 0.5rem;
 }
 
@@ -68,9 +80,10 @@ header {
 }
 
 .cta-button {
+  margin: 0 10px;
   padding: 10px 30px;
   background-color: #ffc107;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
@@ -78,34 +91,14 @@ header {
 }
 
 .cta-button:hover {
-  background-color: #e0a800;
+  background-color: #222;
+  color: #e0a800;
+  border: 1px solid #e0a800;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    padding: 5px 20px;
-  }
-
-  .container {
-    flex-direction: column;
-  }
-
-  .about-info,
-  .about-skills {
-    width: 100%;
-  }
+.hero-image img {
+  width: 300px;
+  height: 200px;
 }
 
 .about-me {
@@ -118,9 +111,9 @@ header {
   align-items: center;
 }
 
-.container {
+.about-me .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: -60px auto;
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
@@ -132,6 +125,10 @@ header {
 
 .about-skills {
   width: 50%;
+}
+
+.about-img img {
+  border-radius: 360px;
 }
 
 .skill {
@@ -176,13 +173,16 @@ header {
   text-align: center;
 }
 
-.container {
+.my-services .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-items {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
@@ -195,6 +195,8 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   transition: transform 0.3s;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .service:hover {
@@ -220,24 +222,13 @@ header {
   line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-  .service-items {
-    flex-direction: column;
-  }
-
-  .service {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
 .resume-section {
   background-color: #222;
   color: white;
   padding: 50px 0;
 }
 
-.container {
+.resume-section .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -292,30 +283,23 @@ header {
   margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-  .container,
-  .resume-inner,
-  .resume-skills-hobbies {
-    flex-direction: column;
-  }
-
-  .resume-experience,
-  .resume-education,
-  .resume-skills,
-  .resume-hobbies {
-    width: 100%;
-  }
-}
 .portfolio-section {
+  height: 100vh;
   background-color: #222;
   color: white;
   padding: 50px 0;
 }
 
-.container {
+.portfolio-section .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-section .container h2 {
+  text-align: center;
 }
 
 .portfolio-filter {
@@ -374,21 +358,18 @@ header {
   color: #ffc107;
 }
 
-@media (max-width: 768px) {
-  .portfolio-grid {
-  }
-}
-
 .blog-section {
   background-color: #222;
   color: white;
   padding: 50px 0;
 }
 
-.container {
+.blog-section .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-grid {
@@ -440,22 +421,18 @@ header {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .blog-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .contact-section {
-  background-color: #324b81; /* Ajusta este color para que coincida con tu paleta */
+  background-color: #333; /* Ajusta este color para que coincida con tu paleta */
   color: white;
   padding: 50px 0;
+  height: 70vh;
 }
 
-.container {
+.contact-section .container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 0 15px;
 }
@@ -504,14 +481,70 @@ header {
 }
 
 footer {
-  background-color: #293751; /* Oscuro */
+  background-color: #000; /* Oscuro */
   color: white;
   text-align: center;
   padding: 10px 0;
 }
 
+/* RESPONSIVE MOBILE */
+
 @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 5px 20px;
+  }
+
   .container {
+    flex-direction: column;
+  }
+
+  .about-info,
+  .about-skills {
+    width: 100%;
+  }
+
+  .service-items {
+    flex-direction: column;
+  }
+
+  .service {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .resume-section .container,
+  .resume-inner,
+  .resume-skills-hobbies {
+    flex-direction: column;
+  }
+
+  .resume-experience,
+  .resume-education,
+  .resume-skills,
+  .resume-hobbies {
+    width: 100%;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+  }
+
+  .contact .container {
     flex-direction: column;
   }
 

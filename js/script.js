@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (event) {
   var dataText = [
-    "Desarrollador Full Stack",
-    "Diseñador UX/UI",
+    "Entusiasta por el desarrollo",
+    "Apasionado por la tecnología",
     "Freelancer Creativo",
   ];
 
