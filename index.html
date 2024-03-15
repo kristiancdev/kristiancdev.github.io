@@ -1,24 +1,257 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KristiancDev | Desarrollador de Software</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">KristiancDev</div>
+        <div class="nav-links">
+          <a href="#home">Inicio</a>
+          <a href="#about">Acerca de</a>
+          <a href="#services">Servicios</a>
+          <a href="#resume">Currículum</a>
+          <a href="#portfolio">Portafolio</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contacto</a>
+        </div>
+      </nav>
+    </header>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Hola, mi nombre es<br />Cristian Cevallos</h1>
+        <p>Desarrollador de Software</p>
+        <button class="cta-button">Conoce más</button>
+      </div>
+    </section>
 
-<head>
-    <title>KristiancDev 💻</title>
-    <link type="text/css" rel="stylesheet" href="css/404.css" />
-    <link rel="icon" type="image/x-icon" href="../images/tsParticles-64.png">
-</head>
+    <section id="about" class="about-me">
+      <div class="container">
+        <div class="about-info">
+          <h2>ACERCA DE MÍ</h2>
+          <h3>Quién Soy</h3>
+          <p>
+            Mi nombre es [Tu Nombre], soy un Desarrollador Full Stack freelance
+            con base en [Tu Ciudad]. Estoy muy apasionado y dedicado a mi
+            trabajo. Con [X años] años de experiencia como profesional Full
+            Stack Developer, he adquirido las habilidades necesarias para
+            construir proyectos web desde cero hasta llegar a sitios web
+            premium.
+          </p>
+          <p>
+            [Aquí puedes continuar con más detalles sobre ti, tu filosofía de
+            trabajo, tus habilidades o cualquier otra información que creas
+            relevante.]
+          </p>
+          <a href="CV_[TuNombre].pdf" class="download-cv-button" download
+            >Descargar CV</a
+          >
+        </div>
+        <div class="about-skills">
+          <!-- Aquí irían las habilidades con las barras de nivel o estrellas -->
+          <!-- Ejemplo de habilidad: -->
+          <div class="skill">
+            <p>HTML5</p>
+            <p>HTML5</p>
+            <p>HTML5</p>
+            <div class="skill-level" data-level="90%"></div>
+          </div>
+          <!-- Repetir para cada habilidad -->
+        </div>
+      </div>
+    </section>
 
-<body class="permission_denied">
-    <div id="tsparticles"></div>
-    <div class="denied__wrapper">
-        <h1>404</h1>
-        <h3>LOST IN <span>SPACE</span> KristiancDev? Hmm, looks like that page doesn't exist.</h3>
-        <img id="astronaut" src="images/astronaut.svg" />
-        <img id="planet" src="images/planet.svg" />
-        <a href="#"><button class="denied__link">Go Home</button></a>
-    </div>
+    <section id="services" class="my-services">
+      <div class="container">
+        <h2>MIS SERVICIOS</h2>
+        <h3>¿Qué Puedo Hacer?</h3>
+        <div class="service-items">
+          <div class="service">
+            <div class="icon-container">
+              <img src="desktop-icon.png" alt="Desktop Development Icon" />
+            </div>
+            <h4>Desarrollo de Aplicaciones de Escritorio</h4>
+            <p>
+              [Descripción breve del servicio de desarrollo de aplicaciones de
+              escritorio.]
+            </p>
+          </div>
+          <div class="service">
+            <div class="icon-container">
+              <img src="mobile-icon.png" alt="Mobile Development Icon" />
+            </div>
+            <h4>Desarrollo de App Móviles</h4>
+            <p>
+              [Descripción breve del servicio de desarrollo de aplicaciones
+              móviles.]
+            </p>
+          </div>
+          <div class="service">
+            <div class="icon-container">
+              <img src="web-icon.png" alt="Web Development Icon" />
+            </div>
+            <h4>Desarrollo Web</h4>
+            <p>
+              [Descripción breve de tus aprendizajes y servicios en desarrollo
+              web.]
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/tsparticles@2.3.4/tsparticles.bundle.min.js"></script>
-    <script type="text/javascript" src="js/404.js"></script>
+    <section id="resume" class="resume-section">
+      <div class="container">
+        <div class="resume-inner">
+          <div class="resume-experience">
+            <h3>EXPERIENCIA</h3>
+            <!-- Lista de experiencias -->
+            <div class="experience-item">
+              <h4>Nombre de la Empresa</h4>
+              <p>Cargo - Período</p>
+              <ul>
+                <li>Detalle de responsabilidades y logros</li>
+                <!-- Más ítems si son necesarios -->
+              </ul>
+            </div>
+            <!-- Repetir para cada experiencia -->
+          </div>
 
+          <div class="resume-education">
+            <h3>EDUCACIÓN</h3>
+            <!-- Lista de formación académica -->
+            <div class="education-item">
+              <h4>Grado Académico</h4>
+              <p>Institución - Período</p>
+            </div>
+            <!-- Repetir para cada formación académica -->
+          </div>
+        </div>
+
+        <div class="resume-skills-hobbies">
+          <div class="resume-skills">
+            <h3>HABILIDADES</h3>
+            <!-- Lista de habilidades -->
+            <!-- Ejemplo de habilidad: -->
+            <p>Habilidad</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 80%"></div>
+            </div>
+            <!-- Repetir para cada habilidad -->
+          </div>
+
+          <div class="resume-hobbies">
+            <h3>INTERESES Y AFICIONES</h3>
+            <!-- Iconos de aficiones -->
+            <div class="hobbies-icons">
+              <!-- Ejemplo de afición: -->
+              <span class="hobby-icon">📚</span>
+              <!-- Repetir para cada afición -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+      <div class="container">
+        <h2>PORTAFOLIO</h2>
+        <div class="portfolio-filter">
+          <button class="filter-button" onclick="filterSelection('all')">
+            Todos
+          </button>
+          <button class="filter-button" onclick="filterSelection('mobile')">
+            App Móviles
+          </button>
+          <button class="filter-button" onclick="filterSelection('web')">
+            Web
+          </button>
+          <button class="filter-button" onclick="filterSelection('desktop')">
+            Escritorio
+          </button>
+        </div>
+        <div class="portfolio-grid">
+          <!-- Proyecto 1 -->
+          <div class="portfolio-item mobile">
+            <img src="project1.jpg" alt="Dating Mobile App Design" />
+            <h3>Insurance App</h3>
+            <p>App Móvil de Seguros</p>
+            <a href="#">Leer más</a>
+          </div>
+          <!-- Proyecto 2 -->
+          <div class="portfolio-item web">
+            <img src="project1.jpg" alt="Dating Mobile App Design" />
+            <h3>Sistema POS</h3>
+            <p>Sistema web para ventas e inventarios</p>
+            <a href="#">Leer más</a>
+          </div>
+          <!-- Proyecto 3 -->
+          <div class="portfolio-item desktop">
+            <img src="project1.jpg" alt="Dating Mobile App Design" />
+            <h3>SGS</h3>
+            <p>Sistema de Gestion de Seguros</p>
+            <a href="#">Leer más</a>
+          </div>
+          <!-- Repite los bloques para cada proyecto, asegurándote de cambiar las clases para que coincidan con la categoría del proyecto -->
+        </div>
+      </div>
+    </section>
+    <section id="blog" class="blog-section">
+      <div class="container">
+        <h2>BLOG</h2>
+        <div class="blog-grid">
+          <!-- Entrada de blog 1 -->
+          <div class="blog-entry">
+            <img src="blog-image-1.jpg" alt="Blog Image 1" />
+            <div class="blog-content">
+              <h3>Título del Blog 1</h3>
+              <p class="blog-date">Fecha de Publicación</p>
+              <p>Breve descripción del contenido del blog...</p>
+              <a href="#" class="blog-read-more">Leer más</a>
+            </div>
+          </div>
+          <!-- Repite la estructura para más entradas de blog -->
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Déjame Un Mensaje</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesentium, minus?</p>
+                    <p><i class="fas fa-phone"></i> +92 3068572831</p>
+                    <p><i class="fas fa-envelope"></i> tuemail@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Tu dirección aquí</p>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Mensaje" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="social-links">
+                <!-- Iconos de redes sociales -->
+                <a href="tu-linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="tu-github" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="tu-tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="tu-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <!-- Añade más redes según sea necesario -->
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2024 - Tu Nombre o Marca, Todos los derechos reservados.</p>
+    </footer>
+
+    
+    <script src="js/script.js"></script>
+  </body>
 </html>

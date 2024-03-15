@@ -1,0 +1,518 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  margin-left: 20px;
+  display: inline;
+}
+
+.nav-links {
+  float: right;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffc107;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 10px 30px;
+  background-color: #ffc107;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e0a800;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 5px 20px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .about-info,
+  .about-skills {
+    width: 100%;
+  }
+}
+
+.about-me {
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-info {
+  width: 50%;
+}
+
+.about-skills {
+  width: 50%;
+}
+
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill p {
+  margin: 0;
+}
+
+.skill-level {
+  background-color: #fff;
+  height: 5px;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.skill-level[data-level] {
+  width: attr(data-level);
+}
+
+.download-cv-button {
+  padding: 10px 20px;
+  background-color: #ffc107;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.download-cv-button:hover {
+  background-color: #e0a800;
+}
+
+.my-services {
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.service-items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.service {
+  background-color: #444;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+}
+
+.icon-container {
+  height: 64px;
+  margin-bottom: 20px;
+}
+
+.icon-container img {
+  height: 100%;
+}
+
+.service h4 {
+  color: #ffc107;
+  margin: 10px 0;
+}
+
+.service p {
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .service-items {
+    flex-direction: column;
+  }
+
+  .service {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.resume-section {
+  background-color: #222;
+  color: white;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.resume-experience,
+.resume-education {
+  width: 48%;
+}
+
+.experience-item h4,
+.education-item h4 {
+  color: #ffc107;
+  margin-bottom: 5px;
+}
+
+.resume-skills-hobbies {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-skills p,
+.resume-hobbies h3 {
+  margin-top: 0;
+}
+
+.skill-bar {
+  background-color: #444;
+  height: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.skill-level {
+  background-color: #ffc107;
+  height: 100%;
+}
+
+.hobbies-icons {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .resume-inner,
+  .resume-skills-hobbies {
+    flex-direction: column;
+  }
+
+  .resume-experience,
+  .resume-education,
+  .resume-skills,
+  .resume-hobbies {
+    width: 100%;
+  }
+}
+.portfolio-section {
+  background-color: #222;
+  color: white;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.portfolio-filter {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-button {
+  background-color: #333;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+  background-color: #ffc107;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.portfolio-item h3 {
+  margin: 10px 0;
+  color: #ffc107;
+}
+
+.portfolio-item p {
+  font-size: 0.9em;
+}
+
+.portfolio-item a {
+  text-decoration: none;
+  color: #ffc107;
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+  }
+}
+
+.blog-section {
+  background-color: #222;
+  color: white;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.blog-entry {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.blog-entry:hover {
+  transform: translateY(-10px);
+}
+
+.blog-entry img {
+  width: 100%;
+  display: block;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-content h3 {
+  margin-top: 0;
+  color: #ffc107;
+}
+
+.blog-date {
+  font-style: italic;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.blog-read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ffc107;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog-read-more:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-section {
+  background-color: #324b81; /* Ajusta este color para que coincida con tu paleta */
+  color: white;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #ffc107; /* Acento */
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #e0a800;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ffc107; /* Acento */
+}
+
+footer {
+  background-color: #293751; /* Oscuro */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .social-links {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
