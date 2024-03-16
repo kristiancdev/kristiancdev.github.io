@@ -26,155 +26,192 @@ h2 {
   font-family: "Anta", sans-serif;
 }
 
+/* HEADER STYLES */
 header {
+  width: 100%;
   background-color: var(--dark-color);
-  color: var(--light-color);
   padding: 10px 0;
   position: fixed;
-  width: 100%;
   top: 0;
   z-index: 1000;
 }
 
-.logo {
-  margin-left: 20px;
-  display: inline;
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  display: none; /* Inicialmente oculto */
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--light-color); /* Usa el color que tengas para tus íconos */
 }
 
 .nav-links {
-  float: right;
-  margin-right: 20px;
+  display: flex;
+  list-style-type: none;
 }
 
 .nav-links a {
   color: var(--light-color);
-  text-decoration: none;
   margin: 0 15px;
-  font-size: 0.9em;
-  transition: color 0.3s;
+  font-size: 1em;
+  transition: color 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
   color: var(--primary-color);
 }
 
-/***************************** INICIO DEL HERO **************************************/
-
+/* HERO STYLES */
 .hero {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  min-height: 100vh;
   background-color: var(--dark-color);
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
-  margin-top: -20px;
-  margin-bottom: 0.5rem;
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
 }
 
 .hero-content p {
-  font-size: 1rem;
   margin-bottom: 2rem;
 }
 
-.hero-content .subtitulo {
+.hero-content .subtitle {
   font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+  margin: 0;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
 }
+
 .cta-button {
-  margin: 0 10px;
-  padding: 10px 30px;
+  padding: 10px 20px;
+  font-weight: 600;
   background-color: var(--primary-color);
-  border: 1px solid transparent;
+  color: var(--dark-color);
+  border: none;
   border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  margin-right: 16px;
+  transition: background-color 0.3s ease-in-out;
+  border: 2px solid transparent;
 }
 
 .cta-button:hover {
   background-color: var(--dark-color);
   color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.cta-button.secondary {
+  font-weight: 600;
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.cta-button.secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+}
+
+.hero-image {
+  max-width: 520px;
 }
 
 .hero-image img {
-  width: 350px;
+  max-width: 100%;
+  height: auto;
 }
 
-/***************************** FIN DEL HERO **************************************/
-
-/***************************** INICIO DEL ABOUT **************************************/
+/***************************** BEGIN ABOUT *****************************/
 
 .about-me {
-  height: 100vh;
   background-color: var(--dark-color);
   color: var(--light-color);
-  /* padding: 50px 0; */
+  padding: 50px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.about-me .container {
+.about-me-container {
+  width: 90%;
   max-width: 1200px;
-  margin: 0px auto;
-  padding: 0 15px;
   display: flex;
+  flex-wrap: wrap; /* Asegura responsividad */
   justify-content: space-between;
   align-items: center;
 }
 
 .about-info {
-  width: 50%;
+  flex: 1; /* Asegura flexibilidad en el layout */
+  max-width: 600px; /* Establece un ancho máximo para el texto */
+  margin-right: 20px; /* Espacio entre texto e imagen */
 }
 
 .about-info h2 {
   margin-bottom: 30px;
 }
+
 .about-info p {
   margin-bottom: 20px;
 }
 
-.about-skills {
-  width: 50%;
+.about-img {
+  flex: 1; /* Asegura flexibilidad en el layout */
+  max-width: 400px; /* Limita el tamaño de la imagen */
+  text-align: center; /* Centra la imagen si es más pequeña que el máximo */
 }
 
 .about-img img {
-  border-radius: 360px;
+  width: 100%; /* Hace que la imagen sea responsiva */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 50%; /* Hace que la imagen sea completamente redonda */
 }
 
 .download-cv-button {
   padding: 10px 20px;
   background-color: var(--primary-color);
-  color: black;
-  border: 1px solid transparent;
+  color: var(--dark-color);
+  border: none;
+  border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s;
-  display: inline-block;
-  margin-top: 20px;
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
 .download-cv-button:hover {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  background-color: var(--light-color);
+  color: var(--dark-color);
 }
-/***************************** FIN DEL ABOUT **************************************/
+/***************************** END ABOUT *****************************/
 
-/***************************** INICIO DEL SERVICES **************************************/
+/***************************** BEGIN SERVICES *****************************/
 
 .my-services {
-  height: 100vh;
   background-color: #222;
   color: white;
   padding: 50px 0;
   text-align: center;
 }
 
-.my-services .container {
+.my-services-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 15px;
@@ -182,26 +219,21 @@ header {
   flex-direction: column;
 }
 
-.my-services .container h2 {
-  margin-bottom: 20px;
-}
-
 .service-items {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  flex-wrap: wrap; /* Asegura la responsividad */
+  justify-content: space-around; /* Distribuye los elementos uniformemente */
+  gap: 20px; /* Espacio entre los servicios */
+  margin-top: 30px;
 }
 
 .service {
   background-color: #333;
   padding: 20px;
-  width: 30%;
+  flex-basis: 30%; /* Base para el tamaño de los elementos de servicio */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   transition: transform 0.3s;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .service:hover {
@@ -209,35 +241,50 @@ header {
 }
 
 .icon-container {
-  height: 64px;
-  margin-bottom: 20px;
+  max-width: 160px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .icon-container img {
-  height: 100%;
+  width: 100%; /* Hace que las imágenes sean responsivas */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
 
 .service h4 {
   color: #ffc107;
-  margin: 10px 0;
+  margin: 20px 0 10px;
 }
 
 .service p {
+  text-align: left;
   font-size: 0.9em;
   line-height: 1.6;
 }
-/***************************** FIN DEL SERVICES **************************************/
 
-/***************************** INICIO DEL PORTFOLIO **************************************/
+@media (max-width: 768px) {
+  .service {
+    flex-basis: 45%; /* Ajuste para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .service {
+    flex-basis: 100%; /* Ajuste para pantallas muy pequeñas */
+  }
+}
+
+/***************************** END SERVICES *****************************/
+
+/***************************** BEGIN PORTFOLIO *****************************/
 
 .portfolio-section {
-  height: 100vh;
   background-color: #222;
   color: white;
   padding: 50px 0;
 }
 
-.portfolio-section .container {
+.portfolio-section-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 15px;
@@ -245,31 +292,8 @@ header {
   flex-direction: column;
 }
 
-.portfolio-section .container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.portfolio-filter {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.filter-button {
-  background-color: #333;
-  border: none;
-  padding: 10px 20px;
-  color: white;
-  margin: 0 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.filter-button:hover {
-  background-color: #ffc107;
-}
-
 .portfolio-grid {
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
@@ -286,14 +310,19 @@ header {
   transform: translateY(-10px);
 }
 
-.portfolio-item img {
+.portfolio-item-img {
   max-width: 200px;
-  border-radius: 5px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.portfolio-item-img img {
+  width: 100%; /* Hace que la imagen sea responsiva */
+  border-radius: 5px; /* Mantiene el diseño original */
   margin-bottom: 10px;
 }
 
 .portfolio-item h3 {
-  margin: 10px 0;
   color: #ffc107;
 }
 
@@ -302,22 +331,25 @@ header {
 }
 
 .portfolio-item a {
-  text-decoration: none;
   color: #ffc107;
+  transition: color 0.3s ease; /* Suaviza la transición del color */
 }
 
-/***************************** FIN DEL PORTFOLIO **************************************/
+.portfolio-item a:hover {
+  color: #fff; /* Cambia el color al pasar el ratón */
+}
 
-/***************************** INICIO DEL BLOG **************************************/
+/***************************** END PORTFOLIO *****************************/
+
+/***************************** BEGIN BLOG *****************************/
 
 .blog-section {
-  height: 100vh;
   background-color: #222;
   color: white;
   padding: 50px 0;
 }
 
-.blog-section .container {
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 15px;
@@ -325,31 +357,24 @@ header {
   flex-direction: column;
 }
 
-.blog-section .container h2 {
-  margin-bottom: 20px;
-}
-
 .blog-grid {
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
 .blog-entry {
+  display: flex;
+  flex-direction: column; /* Cambiado para mejorar la visualización */
   background-color: #333;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s;
-  display: flex;
 }
 
 .blog-entry:hover {
   transform: translateY(-10px);
-}
-
-.blog-entry img {
-  width: 20%;
-  display: block;
 }
 
 .blog-content {
@@ -357,7 +382,6 @@ header {
 }
 
 .blog-content h3 {
-  margin-top: 0;
   color: #ffc107;
 }
 
@@ -368,37 +392,48 @@ header {
 }
 
 .blog-read-more {
-  display: inline-block;
-  margin-top: 10px;
   color: #ffc107;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease-in-out; /* Suaviza la transición de color */
 }
 
 .blog-read-more:hover {
-  text-decoration: underline;
+  color: #fff; /* Cambio de color al pasar el ratón para mejorar la interactividad */
+  text-decoration: underline; /* Añade un subrayado al pasar el ratón para mayor claridad */
 }
 
-/* SECCION CONTACT */
+/***************************** END BLOG *****************************/
+
+/* BEGIN CONTACT SECTION */
 .contact-section {
-  background-color: #222; /* Ajusta este color para que coincida con tu paleta */
+  width: 100%;
+  background-color: #222;
   color: white;
   padding: 50px 0;
-  height: 70vh;
 }
 
 .contact-section .container {
-  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center; /* Centrado para mejor visualización */
   padding: 0 15px;
 }
 
 .contact-content {
+  width: 100%;
+  margin-top: 30px;
   display: flex;
-  justify-content: space-between;
+  align-items: self-start;
+  justify-content: space-between; /* Espaciado mejorado */
+  flex-wrap: wrap; /* Asegura responsividad */
+}
+
+.contact-info .message-info {
+  margin-bottom: 20px;
+  line-height: 1.6rem;
 }
 
 .contact-info p {
@@ -416,104 +451,60 @@ header {
 }
 
 .contact-form button {
-  background-color: #ffc107; /* Acento */
+  background-color: #ffc107;
   color: #333;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #e0a800;
 }
 
 .social-links a {
   color: white;
   margin: 0 10px;
   font-size: 24px;
-  transition: color 0.3s;
 }
 
-.social-links a:hover {
-  color: #ffc107; /* Acento */
-}
-
+/* BEGIN FOOTER */
 footer {
-  background-color: #000; /* Oscuro */
+  background-color: #000;
   color: white;
   text-align: center;
   padding: 10px 0;
 }
 
-/* RESPONSIVE MOBILE */
-
+/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
+  nav {
+    margin: 0 20px;
+  }
+  .hamburger {
+    display: inline-block; /* Mostrar el botón en dispositivos móviles */
+  }
+
   .nav-links {
-    display: none;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    padding: 5px 20px;
-  }
-
-  .container {
+    display: none; /* Ocultar enlaces en dispositivos móviles */
     flex-direction: column;
-  }
-
-  .about-info,
-  .about-skills {
     width: 100%;
+    text-align: center;
   }
 
-  .service-items {
+  .nav-links a {
+    padding: 15px;
+  }
+
+  .nav-links.active {
+    display: flex; /* Mostrar cuando el menú esté activo */
+  }
+
+  .hero-buttons {
+    display: flex;
     flex-direction: column;
-  }
-
-  .service {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .resume-section .container,
-  .resume-inner,
-  .resume-skills-hobbies {
-    flex-direction: column;
-  }
-
-  .resume-experience,
-  .resume-education,
-  .resume-skills,
-  .resume-hobbies {
-    width: 100%;
-  }
-
-  .blog-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .portfolio-grid {
-  }
-
-  .contact .container {
-    flex-direction: column;
-  }
-
-  .contact-content {
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 26px;
   }
 
   .social-links {
-    margin-top: 20px;
-    text-align: center;
+    margin-bottom: 16px;
   }
 }

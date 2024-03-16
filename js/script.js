@@ -1,3 +1,15 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    const expanded =
+      hamburger.getAttribute("aria-expanded") === "true" || false;
+    hamburger.setAttribute("aria-expanded", !expanded);
+    navLinks.classList.toggle("active");
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function (event) {
   var dataText = [
     "Entusiasta por el desarrollo",
