@@ -14,10 +14,14 @@
     />
 
     <!-- Título SEO-friendly -->
-    <title>KristiancDev | Desarrollador de Software Full Stack</title>
+    <title>KristiancDev | Desarrollador de Software</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/Logo.png" />
 
     <!-- Enlace a la hoja de estilos CSS -->
     <link rel="stylesheet" href="css/styles.css" />
+    <link id="theme-style" rel="stylesheet" />
 
     <!-- Icons de FontAwesome para uso en el sitio -->
     <link
@@ -29,111 +33,115 @@
     />
   </head>
   <body>
-    <!-- BEGIN HEADER -->
+    <!-- Header -->
     <header>
       <nav>
-        <div class="logo">KristiancDev</div>
-        <button
-          class="hamburger"
-          aria-label="Menú"
-          aria-expanded="false"
-          aria-controls="navbar"
-        >
+        <div class="logo">
+          <a href="#home"><span>&lt;K</span>ristiancDev<span>/&gt;</span></a>
+        </div>
+        <div class="menu-toggle">
           <i class="fas fa-bars"></i>
-          <!-- Asegúrate de tener FontAwesome para usar este ícono, o reemplázalo con otro -->
-        </button>
-        <div class="nav-links" id="navbar">
-          <a href="#home">Inicio</a>
-          <a href="#about">Acerca de</a>
-          <a href="#services">Servicios</a>
-          <a href="#portfolio">Portafolio</a>
-          <a href="#blog">Blog</a>
-          <a href="#contact">Contacto</a>
+        </div>
+        <ul class="menu">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#about">Acerca de mí</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#works">Portafolio</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+        <div class="theme-toggle">
+          <i class="fas fa-moon"></i>
         </div>
       </nav>
     </header>
 
-    <!-- END HEADER -->
-
-    <!-- BEGIN HERO -->
-    <section class="hero" id="home" role="banner">
-      <div class="hero-container">
-        <div class="hero-content">
-          <p class="welcome-message">Bienvenidos a mi portafolio</p>
-          <p class="subtitle">Mi nombre es Cristian, soy</p>
+    <!-- BEGIN HOME -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2>Cristian Cevallos</h2>
           <h1>Desarrollador de Software</h1>
-          <p class="typing-effect">Soy <span class="typed-words"></span></p>
+          <p>
+            Permíteme ser tu aliado tecnológico. <br />
+            Desarrollador para empresas de seguros
+          </p>
           <div class="hero-buttons">
-            <a href="#portfolio" class="cta-button">Mis Proyectos</a>
-            <a href="#contact" class="cta-button secondary">Contáctame</a>
+            <button class="btn-contact">
+              Contáctame <i class="fas fa-phone"></i>
+            </button>
+            <button class="btn-cv">
+              Descarga mi CV <i class="fas fa-download"></i>
+            </button>
           </div>
         </div>
-        <div class="hero-image">
-          <img
-            src="/images/LogoPositivo.png"
-            alt="Logo de Cristian, Desarrollador de Software"
-          />
-        </div>
       </div>
     </section>
-    <!-- END HERO -->
+    <!-- END HOME -->
 
     <!-- BEGIN ABOUT -->
-    <section id="about" class="about-me" aria-labelledby="about-title">
-      <div class="about-me-container">
-        <div class="about-info">
-          <h2 id="about-title">Acerca de Mí</h2>
-          <p>
-            Soy un entusiasta Desarrollador de Software con más de una década de
-            experiencia en el sector de seguros, especializándome en soluciones
-            para el sistema Sise. Mi expertise abarca desde Visual Basic 6 y C#
-            hasta una profunda comprensión de bases de datos como Sybase, SQL
-            Server y Oracle.
-          </p>
-          <p>
-            Comprometido con el crecimiento constante, estoy ampliando mis
-            horizontes hacia Python y Flutter, preparándome para desafíos
-            futuros en estos campos. Mi pasión por la tecnología se complementa
-            con una sólida habilidad para abordar y resolver problemas
-            complejos, asegurando soluciones innovadoras y eficientes.
-          </p>
-          <p>
-            Fuera del entorno tecnológico, valoro profundamente los momentos con
-            mi familia y el fútbol, pilares que mantienen un balance saludable
-            en mi vida. Si buscas a alguien con un fuerte compromiso y una
-            dedicación incansable hacia la calidad y la innovación, estamos en
-            la misma página.
-          </p>
-          <a
-            href="assets/pdf/CV-Cristian.pdf"
-            class="download-cv-button"
-            download
-            >Descargar CV</a
-          >
+    <section id="about" class="about">
+      <div class="container about-container">
+        <h2>Acerca de Mí</h2>
+        <div class="about-content">
+          <div class="about-details">
+            <p>
+              Soy un entusiasta Desarrollador de Software con más de una década
+              de experiencia en el sector de seguros, especializándome en
+              soluciones para el sistema Sise. Mi expertise abarca desde Visual
+              Basic 6 y C# hasta una profunda comprensión de bases de datos como
+              Sybase, SQL Server y Oracle.
+            </p>
+            <p>
+              Comprometido con el crecimiento constante, estoy ampliando mis
+              horizontes hacia Python y Flutter, preparándome para desafíos
+              futuros en estos campos. Mi pasión por la tecnología se
+              complementa con una sólida habilidad para abordar y resolver
+              problemas complejos, asegurando soluciones innovadoras y
+              eficientes.
+            </p>
+            <p>
+              Fuera del entorno tecnológico, valoro profundamente los momentos
+              con mi familia y el fútbol, pilares que mantienen un balance
+              saludable en mi vida. Si buscas a alguien con un fuerte compromiso
+              y una dedicación incansable hacia la calidad y la innovación,
+              estamos en la misma página.
+            </p>
+          </div>
         </div>
-        <div class="about-img">
-          <img
-            src="images/FotoKristian-SinFondo.png"
-            alt="Cristian posando, desarrollador de software"
-          />
+        <div class="about-stats">
+          <div class="stat">
+            <span>198</span>
+            <p>Proyectos completados</p>
+          </div>
+          <div class="stat">
+            <span>5670</span>
+            <p>Tazas de café</p>
+          </div>
+          <div class="stat">
+            <span>427</span>
+            <p>Clientes satisfechos</p>
+          </div>
+          <div class="stat">
+            <span>35</span>
+            <p>Premios ganados</p>
+          </div>
         </div>
       </div>
     </section>
-    <!-- END ABOUT -->
+    <!--END ABOUT  -->
 
     <!-- BEGIN SERVICES -->
-    <section id="services" class="my-services" aria-labelledby="services-title">
-      <div class="my-services-container">
-        <h2 id="services-title">MIS SERVICIOS</h2>
-        <div class="service-items">
-          <article class="service">
-            <div class="icon-container">
-              <img
-                src="images/medical.png"
-                alt="Icono de desarrollo para el sector de seguros"
-              />
-            </div>
-            <h4>Desarrollo para el Sector de Seguros</h4>
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Mis Servicios</h2>
+        <div class="service-cards">
+          <div class="service-card">
+            <img
+              src="assets/images/Services/medical.png"
+              alt="Desarrollo para el Sector de Seguros"
+            />
+            <h3>Sector de Seguros</h3>
             <p>
               Desarrollo personalizado, actualización y mantenimiento de
               sistemas de gestión, con especialización en el sistema Sise. Desde
@@ -142,15 +150,13 @@
               vanguardia tecnológica y sea compatible con las últimas
               tecnologías.
             </p>
-          </article>
-          <article class="service">
-            <div class="icon-container">
-              <img
-                src="images/mobile-phone.png"
-                alt="Icono de desarrollo móvil"
-              />
-            </div>
-            <h4>Aplicaciones Móviles y Web</h4>
+          </div>
+          <div class="service-card">
+            <img
+              src="assets/images/Services/mobile-phone.png"
+              alt="Aplicaciones Móviles y Web"
+            />
+            <h3>Aplicaciones Móviles y Web</h3>
             <p>
               Diseño y desarrollo aplicaciones intuitivas y de alto rendimiento,
               ideales para empresas o startups que buscan mejorar la interacción
@@ -158,15 +164,13 @@
               especial énfasis en aplicaciones híbridas utilizando el poderoso
               Framework Flutter.
             </p>
-          </article>
-          <article class="service">
-            <div class="icon-container">
-              <img
-                src="images/web-development.png"
-                alt="Icono de desarrollo web"
-              />
-            </div>
-            <h4>Creador de contenido</h4>
+          </div>
+          <div class="service-card">
+            <img
+              src="assets/images/Services/web-development.png"
+              alt="Creador de contenido"
+            />
+            <h3>Creador de Contenido</h3>
             <p>
               En mis redes sociales, encontrarás talleres, capacitaciones y
               soporte técnico en Visual Basic 6, C#, Python y Flutter. Además,
@@ -175,26 +179,25 @@
               mejores prácticas hasta el desarrollo de aplicaciones desde cero y
               la resolución de problemas complejos.
             </p>
-          </article>
+          </div>
         </div>
       </div>
     </section>
-    <!-- END SERVICES -->
 
-    <!-- BEGIN PORTFOLIO -->
+    <!-- Sección Portafolio -->
     <section
-      id="portfolio"
+      id="works"
       class="portfolio-section"
       aria-labelledby="portfolio-title"
     >
       <div class="portfolio-section-container">
-        <h2 id="portfolio-title">PORTAFOLIO</h2>
+        <h2 id="portfolio-title">Portafolio</h2>
         <div class="portfolio-grid">
           <!-- Proyecto 1 -->
-          <article class="portfolio-item mobile">
+          <article class="portfolio-item">
             <div class="portfolio-item-img">
               <img
-                src="images/AppSeguros.jpeg"
+                src="assets/images/Projects/AppSeguros.jpeg"
                 alt="Vista previa de la aplicación de seguros"
               />
             </div>
@@ -209,14 +212,14 @@
             >
           </article>
           <!-- Proyecto 2 -->
-          <article class="portfolio-item web">
+          <article class="portfolio-item">
             <div class="portfolio-item-img">
               <img
-                src="images/AppPos.jpeg"
+                src="assets/images/Projects/AppPos.jpeg"
                 alt="Vista previa del sistema POS para comida rápida"
               />
             </div>
-            <h3>Sistema POS</h3>
+            <h3>App Sistema POS</h3>
             <p>
               Optimiza tu negocio de comida rápida con nuestro sistema POS.
               Gestiona pedidos, inventario, ventas y pagos de forma rápida y
@@ -225,14 +228,14 @@
             <a href="#" aria-label="Leer más sobre el sistema POS">Leer más</a>
           </article>
           <!-- Proyecto 3 -->
-          <article class="portfolio-item desktop">
+          <article class="portfolio-item">
             <div class="portfolio-item-img">
               <img
-                src="images/AppDeliveryWater.jpeg"
+                src="assets/images/Projects/AppDeliveryWater.jpeg"
                 alt="Vista previa de la aplicación de entrega de agua purificada"
               />
             </div>
-            <h3>App Delivery de Agua Purificada</h3>
+            <h3>Delivery de Agua Purificada</h3>
             <p>
               Tu fuente de agua purificada ahora más cerca que nunca con nuestra
               app de entrega. Realiza pedidos, rastrea entregas y gestiona pagos
@@ -246,35 +249,34 @@
             >
           </article>
           <!-- Proyecto 4 -->
-          <article class="portfolio-item desktop">
+          <article class="portfolio-item">
             <div class="portfolio-item-img">
               <img
-                src="images/AppFutbol.jpeg"
-                alt="Vista previa de la aplicación de entrega de agua purificada"
+                src="assets/images/Projects/AppFutbol.jpeg"
+                alt="Vista previa de la aplicación de gestión de campeonatos de fútbol"
               />
             </div>
-            <h3>App de Gestion de Campeonatos de Futbol</h3>
+            <h3>App de Gestión de Campeonatos de Fútbol</h3>
             <p>
               App definitiva para administrar campeonatos de fútbol, ofreciendo
-              herramientas para organizar torneos, gestionar equipos, y rastrear
+              herramientas para organizar torneos, gestionar equipos y rastrear
               resultados, todo en un solo lugar para una experiencia
               futbolística completa y emocionante.
             </p>
             <a
               href="#"
-              aria-label="Leer más sobre la aplicación de entrega de agua purificada"
+              aria-label="Leer más sobre la aplicación de gestión de campeonatos de fútbol"
               >Leer más</a
             >
           </article>
         </div>
       </div>
     </section>
-    <!-- END PORTFOLIO -->
 
-    <!-- BEGIN BLOG -->
+    <!-- Sección Blog -->
     <section id="blog" class="blog-section" aria-labelledby="blog-title">
       <div class="container">
-        <h2 id="blog-title">BLOG</h2>
+        <h2 id="blog-title">Blog</h2>
         <div class="blog-grid">
           <!-- Entrada de blog 1 -->
           <article class="blog-entry">
@@ -296,8 +298,7 @@
               >
             </div>
           </article>
-          <!-- Repite la estructura para más entradas de blog -->
-          <!-- Entrada de blog 1 -->
+          <!-- Entrada de blog 2 -->
           <article class="blog-entry">
             <div class="blog-content">
               <h3>Metodologías Ágiles usando Visual Basic 6</h3>
@@ -318,9 +319,8 @@
         </div>
       </div>
     </section>
-    <!-- END BLOG -->
 
-    <!-- BEGIN CONTACT -->
+    <!-- Sección Contacto -->
     <section
       id="contact"
       class="contact-section"
@@ -334,10 +334,8 @@
               ¿Listo para convertir tus ideas en realidad? <br />
               Hablemos y hagamos que suceda.
             </p>
-
             <p><i class="fas fa-envelope"></i> kristiancdev@gmail.com</p>
             <p><i class="fas fa-map-marker-alt"></i> Quito - Ecuador</p>
-
             <div class="social-links">
               <a
                 href="https://www.linkedin.com/in/cristiancevallos/"
@@ -388,12 +386,13 @@
         </div>
       </div>
     </section>
-    <!-- END CONTACT -->
 
+    <!-- Footer -->
     <footer>
       <p>© 2024 - Creado con ❤️ por KristiancDev.</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="js/script.js"></script>
   </body>
 </html>
