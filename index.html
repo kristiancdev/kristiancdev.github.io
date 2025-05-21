@@ -1,398 +1,1484 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
-    <!-- Meta tags esenciales para el SEO -->
     <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="assets/images/Logo.svg"
+      sizes="any"
+      type="image/svg+xml"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KristiancDev | Desarrollador de Software</title>
     <meta
       name="description"
-      content="Portafolio de KristiancDev, Programador, Desarrollador de Software especializado en desarrollo web, móvil y de escritorio."
+      content="Portafolio de KristiancDev, Programador, Desarrollador de Software especializado en desarrollo web, móvil y de escritorio. Seguros"
     />
     <meta
       name="keywords"
-      content="KristiancDev, Programador, Desarrollador de Software, Desarrollador Web, Desarrollador Móvil, Programador, Portafolio"
+      content="KristiancDev, Programador, Desarrollador de Software, Desarrollador Web, Desarrollador Móvil, Programador, Portafolio, Seguros"
     />
-
-    <!-- Título SEO-friendly -->
-    <title>KristiancDev | Desarrollador de Software</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/Logo.png" />
-
-    <!-- Enlace a la hoja de estilos CSS -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <link id="theme-style" rel="stylesheet" />
-
-    <!-- Icons de FontAwesome para uso en el sitio -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <nav>
-        <div class="logo">
-          <a href="#home"><span>&lt;K</span>ristiancDev<span>/&gt;</span></a>
+  <body class="min-h-screen">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full bg-black bg-opacity-80 backdrop-blur-sm z-50 border-b border-gray-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <span class="text-2xl font-orbitron gradient-text"
+                >KristiancDev</span
+              >
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="#home"
+                class="nav-link text-white px-3 py-2 rounded-md text-sm font-medium active"
+                >Inicio</a
+              >
+              <a
+                href="#about"
+                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >Sobre mí</a
+              >
+              <a
+                href="#services"
+                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >Servicios</a
+              >
+              <a
+                href="#projects"
+                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >Proyectos</a
+              >
+              <a
+                href="#blog"
+                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >Blog</a
+              >
+              <a
+                href="#contact"
+                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >Contacto</a
+              >
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-300 hover:text-white focus:outline-none"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
-        <div class="menu-toggle">
-          <i class="fas fa-bars"></i>
-        </div>
-        <ul class="menu">
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#about">Acerca de mí</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#works">Portafolio</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-        <div class="theme-toggle">
-          <i class="fas fa-moon"></i>
-        </div>
-      </nav>
-    </header>
+      </div>
 
-    <!-- BEGIN HOME -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h2>Cristian Cevallos</h2>
-          <h1>Desarrollador de Software</h1>
-          <p>
-            Permíteme ser tu aliado tecnológico. <br />
-            Desarrollador para empresas de seguros
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-90">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white"
+            >Inicio</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white"
+            >Sobre mí</a
+          >
+          <a
+            href="#services"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white"
+            >Servicios</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white"
+            >Proyectos</a
+          >
+          <a
+            href="#blog"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white"
+            >Blog</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white"
+            >Contacto</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
+    >
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black to-transparent z-10"
+        ></div>
+        <div class="absolute inset-0 bg-grid-lines opacity-10"></div>
+        <div class="absolute top-0 left-0 w-full h-full">
+          <div
+            class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-500 opacity-20 blur-3xl"
+          ></div>
+          <div
+            class="absolute top-2/3 right-1/4 w-64 h-64 rounded-full bg-purple-500 opacity-20 blur-3xl"
+          ></div>
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center"
+      >
+        <div class="flex flex-col items-center">
+          <div
+            class="w-40 h-40 rounded-full bg-gradient-to-br from-gray-900 to-purple-400 flex items-center justify-center mb-8 neon-box pulse"
+          >
+            <img
+              src="assets/images/logo1.webp"
+              alt="KristiancDev"
+              class="w-37 h-37 rounded-full object-cover border-1 border-black bg-transparent"
+            />
+          </div>
+
+          <h1
+            class="text-5xl md:text-5xl font-bold mb-4 font-orbitron neon-text"
+          >
+            <span>Cristian Cevallos</span>
+          </h1>
+
+          <div class="relative inline-block">
+            <h2 class="text-2xl md:text-3xl font-orbitron mb-2 text-gray-300">
+              Desarrollador Full Stack
+            </h2>
+            <div
+              class="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"
+            ></div>
+          </div>
+
+          <p
+            class="text-lg md:text-xl max-w-2xl mx-auto mt-8 mb-8 text-gray-300"
+          >
+            Transformo tus ideas en soluciones digitales innovadoras, pensando
+            en tus necesidades.
           </p>
-          <div class="hero-buttons">
-            <button class="btn-contact">
-              Contáctame <i class="fas fa-phone"></i>
-            </button>
-            <button class="btn-cv">
-              Descarga mi CV <i class="fas fa-download"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END HOME -->
 
-    <!-- BEGIN ABOUT -->
-    <section id="about" class="about">
-      <div class="container about-container">
-        <h2>Acerca de Mí</h2>
-        <div class="about-content">
-          <div class="about-details">
-            <p>
-              Soy un entusiasta Desarrollador de Software con más de una década
-              de experiencia en el sector de seguros, especializándome en
-              soluciones para el sistema Sise. Mi expertise abarca desde Visual
-              Basic 6 y C# hasta una profunda comprensión de bases de datos como
-              Sybase, SQL Server y Oracle.
-            </p>
-            <p>
-              Comprometido con el crecimiento constante, estoy ampliando mis
-              horizontes hacia Python y Flutter, preparándome para desafíos
-              futuros en estos campos. Mi pasión por la tecnología se
-              complementa con una sólida habilidad para abordar y resolver
-              problemas complejos, asegurando soluciones innovadoras y
-              eficientes.
-            </p>
-            <p>
-              Fuera del entorno tecnológico, valoro profundamente los momentos
-              con mi familia y el fútbol, pilares que mantienen un balance
-              saludable en mi vida. Si buscas a alguien con un fuerte compromiso
-              y una dedicación incansable hacia la calidad y la innovación,
-              estamos en la misma página.
-            </p>
-          </div>
-        </div>
-        <div class="about-stats">
-          <div class="stat">
-            <span>198</span>
-            <p>Proyectos completados</p>
-          </div>
-          <div class="stat">
-            <span>5670</span>
-            <p>Tazas de café</p>
-          </div>
-          <div class="stat">
-            <span>427</span>
-            <p>Clientes satisfechos</p>
-          </div>
-          <div class="stat">
-            <span>35</span>
-            <p>Premios ganados</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--END ABOUT  -->
-
-    <!-- BEGIN SERVICES -->
-    <section id="services" class="services">
-      <div class="container">
-        <h2>Mis Servicios</h2>
-        <div class="service-cards">
-          <div class="service-card">
-            <img
-              src="assets/images/Services/medical.png"
-              alt="Desarrollo para el Sector de Seguros"
-            />
-            <h3>Sector de Seguros</h3>
-            <p>
-              Desarrollo personalizado, actualización y mantenimiento de
-              sistemas de gestión, con especialización en el sistema Sise. Desde
-              la implementación de nuevas funcionalidades hasta la optimización
-              del rendimiento, me aseguro de que tu sistema esté en la
-              vanguardia tecnológica y sea compatible con las últimas
-              tecnologías.
-            </p>
-          </div>
-          <div class="service-card">
-            <img
-              src="assets/images/Services/mobile-phone.png"
-              alt="Aplicaciones Móviles y Web"
-            />
-            <h3>Aplicaciones Móviles y Web</h3>
-            <p>
-              Diseño y desarrollo aplicaciones intuitivas y de alto rendimiento,
-              ideales para empresas o startups que buscan mejorar la interacción
-              con sus clientes o optimizar sus operaciones internas. Con
-              especial énfasis en aplicaciones híbridas utilizando el poderoso
-              Framework Flutter.
-            </p>
-          </div>
-          <div class="service-card">
-            <img
-              src="assets/images/Services/web-development.png"
-              alt="Creador de contenido"
-            />
-            <h3>Creador de Contenido</h3>
-            <p>
-              En mis redes sociales, encontrarás talleres, capacitaciones y
-              soporte técnico en Visual Basic 6, C#, Python y Flutter. Además,
-              ofrezco una amplia gama de materiales educativos para todos los
-              niveles de experiencia, desde principiantes hasta avanzados. Desde
-              mejores prácticas hasta el desarrollo de aplicaciones desde cero y
-              la resolución de problemas complejos.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección Portafolio -->
-    <section
-      id="works"
-      class="portfolio-section"
-      aria-labelledby="portfolio-title"
-    >
-      <div class="portfolio-section-container">
-        <h2 id="portfolio-title">Portafolio</h2>
-        <div class="portfolio-grid">
-          <!-- Proyecto 1 -->
-          <article class="portfolio-item">
-            <div class="portfolio-item-img">
-              <img
-                src="assets/images/Projects/AppSeguros.jpeg"
-                alt="Vista previa de la aplicación de seguros"
-              />
-            </div>
-            <h3>App de Seguros</h3>
-            <p>
-              Nuestra app de seguros te brinda acceso rápido a solicitudes de
-              asistencia, estado de reclamaciones, cuentas y pagos. Todo lo que
-              necesitas para gestionar tus pólizas, al alcance de tu mano.
-            </p>
-            <a href="#" aria-label="Leer más sobre la aplicación de seguros"
-              >Leer más</a
+          <div class="flex space-x-4">
+            <a
+              href="#contact"
+              class="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium hover:opacity-90 transition-all duration-300 transform hover:scale-105"
             >
-          </article>
-          <!-- Proyecto 2 -->
-          <article class="portfolio-item">
-            <div class="portfolio-item-img">
-              <img
-                src="assets/images/Projects/AppPos.jpeg"
-                alt="Vista previa del sistema POS para comida rápida"
-              />
-            </div>
-            <h3>App Sistema POS</h3>
-            <p>
-              Optimiza tu negocio de comida rápida con nuestro sistema POS.
-              Gestiona pedidos, inventario, ventas y pagos de forma rápida y
-              eficiente, todo desde una sola plataforma fácil de usar.
-            </p>
-            <a href="#" aria-label="Leer más sobre el sistema POS">Leer más</a>
-          </article>
-          <!-- Proyecto 3 -->
-          <article class="portfolio-item">
-            <div class="portfolio-item-img">
-              <img
-                src="assets/images/Projects/AppDeliveryWater.jpeg"
-                alt="Vista previa de la aplicación de entrega de agua purificada"
-              />
-            </div>
-            <h3>Delivery de Agua Purificada</h3>
-            <p>
-              Tu fuente de agua purificada ahora más cerca que nunca con nuestra
-              app de entrega. Realiza pedidos, rastrea entregas y gestiona pagos
-              con facilidad, asegurando que siempre tengas agua fresca a tu
-              disposición.
-            </p>
+              Contáctame
+            </a>
+            <a
+              href="#projects"
+              class="px-8 py-3 border border-blue-500 text-blue-500 rounded-full font-medium hover:bg-blue-500 hover:bg-opacity-10 transition-all duration-300 transform hover:scale-105"
+            >
+              Ver Proyectos
+            </a>
+          </div>
+
+          <div class="mt-12 flex space-x-6">
             <a
               href="#"
-              aria-label="Leer más sobre la aplicación de entrega de agua purificada"
-              >Leer más</a
+              class="social-icon text-xl text-gray-400 hover:text-blue-400"
             >
-          </article>
-          <!-- Proyecto 4 -->
-          <article class="portfolio-item">
-            <div class="portfolio-item-img">
-              <img
-                src="assets/images/Projects/AppFutbol.jpeg"
-                alt="Vista previa de la aplicación de gestión de campeonatos de fútbol"
-              />
-            </div>
-            <h3>App de Gestión de Campeonatos de Fútbol</h3>
-            <p>
-              App definitiva para administrar campeonatos de fútbol, ofreciendo
-              herramientas para organizar torneos, gestionar equipos y rastrear
-              resultados, todo en un solo lugar para una experiencia
-              futbolística completa y emocionante.
-            </p>
+              <i class="fab fa-github"></i>
+            </a>
             <a
               href="#"
-              aria-label="Leer más sobre la aplicación de gestión de campeonatos de fútbol"
-              >Leer más</a
+              class="social-icon text-xl text-gray-400 hover:text-blue-400"
             >
-          </article>
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="#"
+              class="social-icon text-xl text-gray-400 hover:text-blue-400"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="social-icon text-xl text-gray-400 hover:text-blue-400"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
         </div>
+      </div>
+
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <a href="#about" class="text-gray-400 hover:text-white">
+          <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
       </div>
     </section>
 
-    <!-- Sección Blog -->
-    <section id="blog" class="blog-section" aria-labelledby="blog-title">
-      <div class="container">
-        <h2 id="blog-title">Blog</h2>
-        <div class="blog-grid">
-          <!-- Entrada de blog 1 -->
-          <article class="blog-entry">
-            <div class="blog-content">
-              <h3>La Razón detrás de la Persistencia</h3>
-              <p class="blog-date">Fecha de Publicación: 31/08/2023</p>
-              <p>
-                En un mundo tecnológico en constante cambio, muchas empresas aún
-                confían en aplicaciones desarrolladas en Visual Basic 6 (VB6), a
-                pesar del surgimiento de nuevas tecnologías. ¿Por qué esta
-                persistencia? En esta entrada, exploraremos las razones detrás
-                de esta decisión y qué motiva a las empresas a no migrar hacia
-                soluciones más modernas...
-              </p>
-              <a
-                href="https://visualbasic6-2023.blogspot.com/2023/08/la-razon-detras-de-la-persistencia.html"
-                class="blog-read-more"
-                >Leer más</a
-              >
-            </div>
-          </article>
-          <!-- Entrada de blog 2 -->
-          <article class="blog-entry">
-            <div class="blog-content">
-              <h3>Metodologías Ágiles usando Visual Basic 6</h3>
-              <p class="blog-date">Fecha de Publicación: 31/08/2023</p>
-              <p>
-                Sumérgete en la fusión única de VB6 y Desarrollo Ágil. Descubre
-                cómo aplicar principios ágiles para revitalizar tus proyectos
-                VB6, mejorando eficiencia y colaboración. ¡Explora esta sinergia
-                transformadora en nuestro último post!
-              </p>
-              <a
-                href="https://visualbasic6-2023.blogspot.com/2023/08/la-razon-detras-de-la-persistencia.html"
-                class="blog-read-more"
-                >Leer más</a
-              >
-            </div>
-          </article>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-darker">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold font-orbitron mb-4 neon-text">
+            <span>Sobre Mí</span>
+          </h2>
+          <div
+            class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"
+          ></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Desarrollador con +13 años en el sector de seguros.
+          </p>
         </div>
-      </div>
-    </section>
 
-    <!-- Sección Contacto -->
-    <section
-      id="contact"
-      class="contact-section"
-      aria-labelledby="contact-title"
-    >
-      <div class="container">
-        <h2 id="contact-title">Déjame Un Mensaje</h2>
-        <div class="contact-content">
-          <div class="contact-info">
-            <p class="message-info">
-              ¿Listo para convertir tus ideas en realidad? <br />
-              Hablemos y hagamos que suceda.
-            </p>
-            <p><i class="fas fa-envelope"></i> kristiancdev@gmail.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> Quito - Ecuador</p>
-            <div class="social-links">
-              <a
-                href="https://www.linkedin.com/in/cristiancevallos/"
-                target="_blank"
-                aria-label="LinkedIn"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a
-                href="https://github.com/kristiancdev/"
-                target="_blank"
-                aria-label="GitHub"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://www.tiktok.com/@kristiancdev?lang=es"
-                target="_blank"
-                aria-label="TikTok"
-                ><i class="fab fa-tiktok"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/kristiancdev/"
-                target="_blank"
-                aria-label="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="relative">
+            <div class="bg-gray-800 rounded-xl p-1 neon-box w-full h-sm">
+              <img
+                src="assets/images/FotoPerfil_Kristian-FondoAzul.png"
+                alt="About me"
+                class="rounded-lg shadow-lg h-full w-full object-cover"
+              />
+            </div>
+            <div
+              class="absolute -bottom-5 -right-5 bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-lg shadow-lg"
+            >
+              <h3 class="text-white font-bold text-xl">13+ Años</h3>
+              <p class="text-white text-sm">Experiencia</p>
             </div>
           </div>
-          <form class="contact-form">
-            <input
-              type="text"
-              placeholder="Nombre"
-              required
-              aria-label="Nombre"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              aria-label="Email"
-            />
-            <textarea
-              placeholder="Mensaje"
-              required
-              aria-label="Mensaje"
-            ></textarea>
-            <button type="submit">Enviar</button>
-          </form>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-4 font-orbitron gradient-text">
+              ¿Quién soy?
+            </h3>
+            <p class="text-gray-300 mb-4">
+              Mi nombre es Cristian, soy desarrollador de software residente en
+              Ecuador.
+            </p>
+            <p class="text-gray-300 mb-4">
+              Mi expertise abarca tecnologías como
+              <strong> Visual Basic 6, C#</strong> y gestión de bases de datos
+              (<strong>Sybase, SQL Server, Oracle</strong>). He trabajado en el
+              sector de seguros, especializándome en el
+              <strong>sistema SISE.</strong>
+            </p>
+            <p class="text-gray-300 mb-4">
+              Comprometido con la innovación, continúo ampliando mis
+              conocimientos en desarrollo
+              <strong>web, móvil e inteligencia artificial</strong>
+              para ofrecer soluciones tecnológicas de vanguardia.
+            </p>
+            <div class="mb-8 mt-6">
+              <h4 class="text-xl font-semibold mb-4 text-gray-200">
+                Mis habilidades
+              </h4>
+              <div class="flex flex-wrap gap-3">
+                <span
+                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-teal-400 border border-teal-400"
+                  >VB6</span
+                >
+                <span
+                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-purple-400 border border-purple-400"
+                  >Crystal Report</span
+                >
+                <span
+                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-orange-400 border border-orange-400"
+                  >C#</span
+                >
+                <span
+                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-blue-400 border border-blue-400"
+                  >JavaScript</span
+                >
+                <span
+                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-green-400 border border-green-400"
+                  >Node.js</span
+                >
+                <span
+                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-red-400 border border-red-400"
+                  >React</span
+                >
+                <span
+                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-yellow-400 border border-yellow-400"
+                  >Aws</span
+                >
+                <span
+                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-green-300 border border-green-300"
+                  >Python</span
+                >
+                <span
+                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-pink-400 border border-pink-400"
+                  >Flutter</span
+                >
+                <span
+                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-blue-300 border border-blue-300"
+                  >Inteligencia Artificial (AI)</span
+                >
+                <span
+                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-orange-400 border border-orange-400"
+                  >Automatizaciónes</span
+                >
+                <span
+                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-red-400 border border-red-400"
+                  >Bases de Datos</span
+                >
+              </div>
+            </div>
+
+            <a
+              href="/assets/pdf/CV-Cristian.pdf"
+              class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium hover:opacity-90 transition-all duration-300"
+            >
+              Descargar CV
+              <i class="fas fa-download ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="mt-24">
+          <h3
+            class="text-2xl font-bold mb-8 text-center font-orbitron gradient-text"
+          >
+            Mi Trayectoria
+          </h3>
+
+          <div class="relative pl-12 timeline">
+            <div class="mb-12 timeline-item relative">
+              <div class="bg-gray-800 p-6 rounded-xl neon-box">
+                <div class="flex items-center mb-2">
+                  <span
+                    class="bg-blue-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded"
+                    >2016 - Presente</span
+                  >
+                  <span class="text-blue-400 text-sm font-medium ml-2"
+                    >Ingeniero Senior de Desarrollo</span
+                  >
+                </div>
+                <h4 class="text-xl font-semibold text-white">
+                  HDI Seguros | Liberty Seguros
+                </h4>
+                <p class="text-gray-300 mt-2">
+                  <li>
+                    Mantenimiento y desarrolo de mejoras del CORE SISE en VB6,
+                    asegurando su estabilidad y funcionamiento óptimo.
+                  </li>
+                  <li>
+                    Migración exitosa de plataforma de facturacion electrónica a
+                    Stupendo, asegurando la continuidad y estabilidad del
+                    servicio.
+                  </li>
+                  <li>
+                    Desarrollo de APIs REST y la creación de Windows Services
+                    con C#.
+                  </li>
+                  <li>
+                    Recientemente me he integrado al equipo web, donde
+                    contribuyo con el mantenimiento y desarrollo de mejoras en
+                    portales y aplicaciones utilizando tecnologías modernas como
+                    React, Node.js, Jenkins y AWS.
+                  </li>
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-12 timeline-item relative">
+              <div class="bg-gray-800 p-6 rounded-xl neon-box">
+                <div class="flex items-center mb-2">
+                  <span
+                    class="bg-purple-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded"
+                    >2015 - 2016</span
+                  >
+                  <span class="text-purple-400 text-sm font-medium ml-2"
+                    >Asistente de Sistemas</span
+                  >
+                </div>
+                <h4 class="text-xl font-semibold text-white">
+                  Medicina Prepagada Vida Sana
+                </h4>
+                <p class="text-gray-300 mt-2">
+                  <li>
+                    Soporte técnico y asistencia a usuarios internos, junto con
+                    el mantenimiento preventivo y correctivo de equipos de
+                    cómputo.
+                  </li>
+                  <li>
+                    Desarrollo y mantenimiento de módulos en VB6 para el sector
+                    de medicina prepagada.
+                  </li>
+                  <li>
+                    Búsqueda y negociación con proveedores para optimizar costos
+                    de insumos y servicios.
+                  </li>
+                  <li>
+                    Integración de información con el sistema contable GALAC,
+                    asegurando la coherencia y eficiencia de los datos.
+                  </li>
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-12 timeline-item relative">
+              <div class="bg-gray-800 p-6 rounded-xl neon-box">
+                <div class="flex items-center mb-2">
+                  <span
+                    class="bg-green-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded"
+                    >2015 - 2016</span
+                  >
+                  <span class="text-green-400 text-sm font-medium ml-2"
+                    >Analista de Sistemas</span
+                  >
+                </div>
+                <h4 class="text-xl font-semibold text-white">
+                  Seguros Constitución
+                </h4>
+                <p class="text-gray-300 mt-2">
+                  <li>
+                    Desarrollo e implementación de servicio para el envío de
+                    correos masivos que mejoró significativamente los tiempos de
+                    respuesta.
+                  </li>
+                  <li>
+                    Desarrollé una demo para la migración de impresiones de
+                    Jetform a Jasper Reports utilizando Java y VB6.
+                  </li>
+                  <li>
+                    Integración el sistema SISE con el portal EnPartes mediante
+                    el consumo de web services, para ls estimación de siniestros
+                    de vehículos.
+                  </li>
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item relative">
+              <div class="bg-gray-800 p-6 rounded-xl neon-box">
+                <div class="flex items-center mb-2">
+                  <span
+                    class="bg-yellow-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded"
+                    >2012 - 2015</span
+                  >
+                  <span class="text-yellow-400 text-sm font-medium ml-2"
+                    >Desarrollador de software</span
+                  >
+                </div>
+                <h4 class="text-xl font-semibold text-white">
+                  Sistran Andina S.A.
+                </h4>
+                <p class="text-gray-300 mt-2">
+                  <li>
+                    Desarrollo en motores de Bases de Datos en Sybase, SQL
+                    Server y Oracle; creación y optimización de stored
+                    procedures, triggers, etc.
+                  </li>
+                  <li>
+                    Soporte y Mantenimiento del sistema SISE a importantes
+                    aseguradoras de Ecuador.
+                  </li>
+                  <li>
+                    Desarrollo de informes y reportes con Crystal Reports y
+                    Excel, participación en migraciones de bases de datos y
+                    código fuente.
+                  </li>
+                  <li>
+                    Revisión de estructuras para cumplir con regulaciones de
+                    entidades de control como SCVS (S01, S02, S03, S05, S07,
+                    S08, S09), UAFE y SRI (ATS, Form 103, Form 104) y procesos
+                    alineados con la normativa vigente.
+                  </li>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black bg-opacity-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold font-orbitron mb-4 neon-text">
+            <span>Mis Servicios</span>
+          </h2>
+          <div
+            class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"
+          ></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Soluciones personalizadas para llevar tus ideas al mundo digital.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-gray-900 rounded-xl p-8 border border-gray-800 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-6 neon-box"
+            >
+              <i class="fas fa-server text-2xl text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">
+              Mantenimiento SISE
+            </h3>
+            <p class="text-gray-300 mb-4">
+              Servicio especializado en el mantenimiento y desarrollo del
+              sistema de seguros SISE, garantizando máxima eficiencia y
+              disponibilidad.
+            </p>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                Ordenes de trabajo
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                Soporte técnico
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                Integración de sistemas
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-gray-900 rounded-xl p-8 border border-gray-800 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-purple-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-6 neon-box-secondary"
+            >
+              <i class="fas fa-globe text-2xl text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Páginas Web</h3>
+            <p class="text-gray-300 mb-4">
+              Diseño y desarrollo de sitios web modernos, responsivos y
+              optimizados para SEO que destacan tu marca en internet.
+            </p>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                Diseño personalizado
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                Mobile First
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                Optimización SEO
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="bg-gray-900 rounded-xl p-8 border border-gray-800 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-green-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-6 neon-box"
+              style="box-shadow: 0 0 10px #10b981, 0 0 20px #10b981"
+            >
+              <i class="fas fa-laptop-code text-2xl text-green-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">
+              Sistemas Personalizados
+            </h3>
+            <p class="text-gray-300 mb-4">
+              Desarrollo de software a medida que se adapta perfectamente a las
+              necesidades específicas de tu negocio o proyecto.
+            </p>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                Análisis de requerimientos
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                Desarrollo ágil
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                Entregas incrementales
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-darker">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold font-orbitron mb-4 neon-text">
+            <span>Mis Proyectos</span>
+          </h2>
+          <div
+            class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"
+          ></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Una selección de mis trabajos más recientes y destacados en
+            diferentes áreas de desarrollo.
+          </p>
+        </div>
+
+        <!-- Project Filters -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+          <button
+            class="px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-medium filter-btn active"
+            data-filter="all"
+          >
+            Todos
+          </button>
+          <button
+            class="px-4 py-2 bg-gray-800 text-gray-300 hover:text-white rounded-full text-sm font-medium filter-btn"
+            data-filter="desktop"
+          >
+            Escritorio
+          </button>
+          <button
+            class="px-4 py-2 bg-gray-800 text-gray-300 hover:text-white rounded-full text-sm font-medium filter-btn"
+            data-filter="backend"
+          >
+            BackEnd
+          </button>
+          <button
+            class="px-4 py-2 bg-gray-800 text-gray-300 hover:text-white rounded-full text-sm font-medium filter-btn"
+            data-filter="frontend"
+          >
+            FrontEnd
+          </button>
+          <button
+            class="px-4 py-2 bg-gray-800 text-gray-300 hover:text-white rounded-full text-sm font-medium filter-btn"
+            data-filter="mobile"
+          >
+            Móvil
+          </button>
+          <button
+            class="px-4 py-2 bg-gray-800 text-gray-300 hover:text-white rounded-full text-sm font-medium filter-btn"
+            data-filter="ia"
+          >
+            IA - Proximamente
+          </button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 - Desktop -->
+          <div
+            class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+            data-category="desktop"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://www.sistran.com/latam/wp-content/uploads/2021/09/Imagen_Soluciones_SISE-01.jpg"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >Escritorio</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                SISE - Sistema integral para compañías de seguros
+              </h3>
+              <p class="text-gray-300 mb-4">
+                SISE es un sistema integral para la administración de seguros,
+                diseñado para apoyar áreas operativas y administrativas.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs bg-gray-800 text-blue-400 px-2 py-1 rounded"
+                  >VB6</span
+                >
+                <span
+                  class="text-xs bg-gray-800 text-green-400 px-2 py-1 rounded"
+                  >Sybase</span
+                >
+                <span
+                  class="text-xs bg-gray-800 text-yellow-400 px-2 py-1 rounded"
+                  >Sql Server</span
+                >
+                <span
+                  class="text-xs bg-gray-800 text-orange-400 px-2 py-1 rounded"
+                  >Oracle</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 - Backend -->
+          <div
+            class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+            data-category="frontend"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="assets/images/Projects/ModaSmart.webp"
+                alt="Moda Smart POS"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >FrontEnd</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-white">Moda Smart POS</h3>
+              <p class="text-gray-300 mb-4">
+                Sistema POS ágil para tiendas de ropa y accesorios. Simplifica
+                ventas, inventario y clientes, elevando tu negocio de moda al
+                siguiente nivel.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs bg-gray-800 text-blue-400 px-2 py-1 rounded"
+                  >React</span
+                >
+                <span
+                  class="text-xs bg-gray-800 text-green-400 px-2 py-1 rounded"
+                  >Node.js</span
+                >
+                <span
+                  class="text-xs bg-gray-800 text-yellow-400 px-2 py-1 rounded"
+                  >Supabase</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 - Frontend -->
+          <div
+            class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+            data-category="frontend"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="assets/images/Projects/MiClubFit.webp"
+                alt="Sistema Gimanasios"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >FrontEnd</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Mi Club Fit - Sistema de Gimnasios
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Gestiona tu gimnasio de forma inteligente. Controla membresías,
+                inventario, máquinas y asistencia QR, optimizando la experiencia
+                de tus clientes y tu operación.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs bg-gray-800 text-blue-400 px-2 py-1 rounded"
+                  >React</span
+                >
+                <span
+                  class="text-xs bg-gray-800 text-purple-400 px-2 py-1 rounded"
+                  >Redux</span
+                >
+                <span
+                  class="text-xs bg-gray-800 text-green-400 px-2 py-1 rounded"
+                  >TailwindCSS</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 - Mobile -->
+          <div
+            class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+            data-category="mobile"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://i.ytimg.com/vi/725sQ0Odvok/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLChQsy7WIkjHuzgo7fvFf0-0DPhKA"
+                alt="App de Seguros"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="bg-pink-500 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >Móvil</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-white">App de Seguros</h3>
+              <p class="text-gray-300 mb-4">
+                Aplicación móvil para cotizar, contratar y gestionar seguros.
+                Permite reportar y consultar el estado de siniestros, revisar
+                cartera, realizar pagos y acceder a múltiples asistencias (vial,
+                médica, hogar, legal).
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs bg-gray-800 text-blue-400 px-2 py-1 rounded"
+                  >Flutter</span
+                >
+                <span class="text-xs bg-gray-800 text-red-400 px-2 py-1 rounded"
+                  >Firebase</span
+                >
+                <span
+                  class="text-xs bg-gray-800 text-purple-400 px-2 py-1 rounded"
+                  >BLoC</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 - Backend -->
+          <div
+            class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+            data-category="backend"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:1400/1*ouGNpxECScUENqbW8P7TOA.png"
+                alt="Microservicios de Pagos"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="bg-purple-500 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >BackEnd</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                Microservicios de Pagos
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Es una arquitectura robusta y flexible diseñada para el
+                procesamiento eficiente y seguro de primas de seguros. Facilita
+                transacciones ágiles y escalables, optimizando la gestión
+                financiera.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs bg-gray-800 text-yellow-400 px-2 py-1 rounded"
+                  >Python</span
+                >
+                <span
+                  class="text-xs bg-gray-800 text-green-400 px-2 py-1 rounded"
+                  >FastAPI</span
+                >
+                <span
+                  class="text-xs bg-gray-800 text-blue-400 px-2 py-1 rounded"
+                  >Docker</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 - Frontend -->
+          <div
+            class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+            data-category="frontend"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="assets/images/Projects/MedicoPlan.webp"
+                alt="Dashboard Analítico"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >FrontEnd</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-white">
+                MedicoPlan - Sistema de Consulta de Planes Médicos
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Plataforma web esencial para medicina prepagada y asistencia
+                médica. Permite consultar planes, coberturas, copagos, fees y
+                exclusiones de forma clara y rápida.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="text-xs bg-gray-800 text-blue-400 px-2 py-1 rounded"
+                  >Vue.js</span
+                >
+                <span
+                  class="text-xs bg-gray-800 text-purple-400 px-2 py-1 rounded"
+                  >Chart.js</span
+                >
+                <span
+                  class="text-xs bg-gray-800 text-green-400 px-2 py-1 rounded"
+                  >Vuetify</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-flex items-center px-8 py-3 border border-blue-500 text-blue-500 rounded-full font-medium hover:bg-blue-500 hover:bg-opacity-10 transition-all duration-300"
+          >
+            Ver más proyectos
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-black bg-opacity-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold font-orbitron mb-4 neon-text">
+            <span>Mi Blog</span>
+          </h2>
+          <div
+            class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"
+          ></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Artículos y tutoriales sobre desarrollo, tecnología y buenas
+            prácticas en el mundo del software.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Blog Post 1 -->
+          <div
+            class="blog-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://www.freecodecamp.org/espanol/news/content/images/2024/12/Youtube--1-.png"
+                alt="Blog Post 1"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >Desarrollo</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-400 mb-3">
+                <span>15 Junio 2023</span>
+                <span class="mx-2">•</span>
+                <span>5 min lectura</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-white">
+                Optimizando APIs con Node.js
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Técnicas avanzadas para mejorar el rendimiento de tus APIs
+                construidas con Node.js y Express.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
+              >
+                Leer más
+                <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div
+            class="blog-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://pbs.twimg.com/media/FPGnJI4XEAAQSXU?format=jpg&name=4096x4096"
+                alt="Blog Post 2"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="bg-purple-500 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >Frontend</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-400 mb-3">
+                <span>28 Mayo 2023</span>
+                <span class="mx-2">•</span>
+                <span>8 min lectura</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-white">
+                React 18: Novedades
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Exploramos las nuevas características de React 18 y cómo pueden
+                beneficiar tus proyectos.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium"
+              >
+                Leer más
+                <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div
+            class="blog-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+          >
+            <div class="relative overflow-hidden h-48">
+              <img
+                src="https://www.akamai.com/site/es/images/article/2023/how-a-web-api-works.png"
+                alt="Blog Post 3"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <span
+                  class="bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded"
+                  >Seguridad</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-400 mb-3">
+                <span>10 Abril 2023</span>
+                <span class="mx-2">•</span>
+                <span>12 min lectura</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-white">
+                Seguridad en APIs REST
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Guía completa para implementar medidas de seguridad efectivas en
+                tus APIs RESTful.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-green-400 hover:text-green-300 font-medium"
+              >
+                Leer más
+                <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-flex items-center px-8 py-3 border border-purple-500 text-purple-500 rounded-full font-medium hover:bg-purple-500 hover:bg-opacity-10 transition-all duration-300"
+          >
+            Ver todos los artículos
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-darker">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold font-orbitron mb-4 neon-text">
+            <span>Contáctame</span>
+          </h2>
+          <div
+            class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"
+          ></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            ¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte a
+            hacerlo realidad.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <form
+              ction="https://formspree.io/f/mkgreand"
+              method="POST"
+              class="space-y-6"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-300 mb-2"
+                    >Nombre</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 rounded-lg input-field focus:ring-2 focus:ring-blue-500 text-white"
+                    placeholder="Tu nombre"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-300 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 rounded-lg input-field focus:ring-2 focus:ring-blue-500 text-white"
+                    placeholder="tu@email.com"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="subject"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                  >Asunto</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  class="w-full px-4 py-3 rounded-lg input-field focus:ring-2 focus:ring-blue-500 text-white"
+                  placeholder="¿Sobre qué quieres hablar?"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                  >Mensaje</label
+                >
+                <textarea
+                  id="message"
+                  rows="5"
+                  class="w-full px-4 py-3 rounded-lg input-field focus:ring-2 focus:ring-blue-500 text-white"
+                  placeholder="Cuéntame sobre tu proyecto..."
+                ></textarea>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-all duration-300"
+                >
+                  Enviar Mensaje
+                  <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 rounded-xl p-8 h-full border border-gray-800 neon-box"
+            >
+              <h3 class="text-2xl font-bold mb-6 text-white font-orbitron">
+                Información de Contacto
+              </h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 bg-blue-500 bg-opacity-20 p-3 rounded-lg"
+                  >
+                    <i class="fas fa-envelope text-blue-400 text-xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-gray-200">Email</h4>
+                    <a
+                      href="mailto:contacto@kristiancdev.com"
+                      class="text-blue-400 hover:text-blue-300"
+                      >kristiancdev@gmail.com</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 bg-purple-500 bg-opacity-20 p-3 rounded-lg"
+                  >
+                    <i class="fas fa-phone-alt text-purple-400 text-xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-gray-200">
+                      Teléfono
+                    </h4>
+                    <a
+                      href="tel:+1234567890"
+                      class="text-purple-400 hover:text-purple-300"
+                      >+(593) 97 924 0389</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 bg-green-500 bg-opacity-20 p-3 rounded-lg"
+                  >
+                    <i class="fas fa-map-marker-alt text-green-400 text-xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-lg font-semibold text-gray-200">
+                      Ubicación
+                    </h4>
+                    <p class="text-gray-300">Quito, Ecuador</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-12">
+                <h4 class="text-lg font-semibold text-gray-200 mb-4">
+                  Sígueme en redes
+                </h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="http://github.com/kristiancdev"
+                    class="social-icon w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl text-gray-300 hover:text-blue-400"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/cristiancevallos/"
+                    class="social-icon w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl text-gray-300 hover:text-blue-400"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://x.com/KristiancDev"
+                    class="social-icon w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl text-gray-300 hover:text-blue-400"
+                  >
+                    <i class="fab fa-x"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/kristiancdev/"
+                    class="social-icon w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl text-gray-300 hover:text-pink-400"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@KristiancDev/"
+                    class="social-icon w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl text-gray-300 hover:text-red-400"
+                  >
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-      <p>© 2024 - Creado con ❤️ por KristiancDev.</p>
+    <footer class="bg-black py-12 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center">
+          <div class="mb-6">
+            <span class="text-2xl font-orbitron gradient-text"
+              >KristiancDev</span
+            >
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-6 mb-8">
+            <a href="#home" class="text-gray-400 hover:text-white">Inicio</a>
+            <a href="#about" class="text-gray-400 hover:text-white">Sobre mí</a>
+            <a href="#services" class="text-gray-400 hover:text-white"
+              >Servicios</a
+            >
+            <a href="#projects" class="text-gray-400 hover:text-white"
+              >Proyectos</a
+            >
+            <a href="#blog" class="text-gray-400 hover:text-white">Blog</a>
+            <a href="#contact" class="text-gray-400 hover:text-white"
+              >Contacto</a
+            >
+          </div>
+
+          <div class="flex space-x-6 mb-8">
+            <a
+              href="http://github.com/kristiancdev"
+              class="social-icon text-xl text-gray-400 hover:text-blue-400"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/cristiancevallos/"
+              class="social-icon text-xl text-gray-400 hover:text-blue-400"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@kristiancdev"
+              class="social-icon text-xl text-gray-400 hover:text-cyan-200"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/kristiancdev/"
+              class="social-icon text-xl text-gray-400 hover:text-pink-400"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+
+          <div class="text-center text-gray-500 text-sm">
+            <p>&copy; 2025 KristiancDev. Todos los derechos reservados.</p>
+            <p class="mt-2">
+              Hecho con <i class="fas fa-heart text-red-500"></i> por
+              KristiancDev
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="js/script.js"></script>
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            }
+          }
+        });
+      });
+
+      // Active nav link on scroll
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      window.addEventListener("scroll", function () {
+        let current = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+
+          if (pageYOffset >= sectionTop - 300) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active", "text-white");
+          link.classList.add("text-gray-300");
+
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active", "text-white");
+            link.classList.remove("text-gray-300");
+          }
+        });
+      });
+
+      // Project filtering
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const projectCards = document.querySelectorAll(".project-card");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          // Remove active class from all buttons
+          filterButtons.forEach((btn) =>
+            btn.classList.remove("active", "bg-blue-500", "text-white")
+          );
+          filterButtons.forEach((btn) =>
+            btn.classList.add("bg-gray-800", "text-gray-300")
+          );
+
+          // Add active class to clicked button
+          this.classList.add("active", "bg-blue-500", "text-white");
+          this.classList.remove("bg-gray-800", "text-gray-300");
+
+          const filter = this.getAttribute("data-filter");
+
+          projectCards.forEach((card) => {
+            if (
+              filter === "all" ||
+              card.getAttribute("data-category") === filter
+            ) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
