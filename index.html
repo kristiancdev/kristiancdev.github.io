@@ -1,1484 +1,776 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cristian Cevallos - Director de Tecnología e Innovación, Arquitecto de Soluciones e IA aplicada a Seguros.">
+    <title>Cristian Cevallos | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      rel="icon"
-      href="assets/images/Logo.svg"
-      sizes="any"
-      type="image/svg+xml"
-    />
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KristiancDev | Desarrollador de Software</title>
-    <meta
-      name="description"
-      content="Portafolio de KristiancDev, Programador, Desarrollador de Software especializado en desarrollo web, móvil y de escritorio. Seguros"
-    />
-    <meta
-      name="keywords"
-      content="KristiancDev, Programador, Desarrollador de Software, Desarrollador Web, Desarrollador Móvil, Programador, Portafolio, Seguros"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body class="min-h-screen">
-    <!-- Navbar -->
-    <nav
-      class="fixed w-full bg-black bg-opacity-80 backdrop-blur-sm z-50 border-b border-gray-800"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
-              <span class="text-2xl font-orbitron gradient-text"
-                >KristiancDev</span
-              >
-            </div>
-          </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-8">
-              <a
-                href="#home"
-                class="nav-link text-white px-3 py-2 rounded-md text-sm font-medium active"
-                >Inicio</a
-              >
-              <a
-                href="#about"
-                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >Sobre mí</a
-              >
-              <a
-                href="#services"
-                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >Servicios</a
-              >
-              <a
-                href="#projects"
-                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >Proyectos</a
-              >
-              <a
-                href="#blog"
-                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >Blog</a
-              >
-              <a
-                href="#contact"
-                class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >Contacto</a
-              >
-            </div>
-          </div>
-          <div class="md:hidden">
-            <button
-              id="mobile-menu-button"
-              class="text-gray-300 hover:text-white focus:outline-none"
-            >
-              <i class="fas fa-bars text-xl"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+<body class="light-mode">
 
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-90">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a
-            href="#home"
-            class="block px-3 py-2 rounded-md text-base font-medium text-white"
-            >Inicio</a
-          >
-          <a
-            href="#about"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white"
-            >Sobre mí</a
-          >
-          <a
-            href="#services"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white"
-            >Servicios</a
-          >
-          <a
-            href="#projects"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white"
-            >Proyectos</a
-          >
-          <a
-            href="#blog"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white"
-            >Blog</a
-          >
-          <a
-            href="#contact"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white"
-            >Contacto</a
-          >
-        </div>
-      </div>
-    </nav>
+    <!-- Skip to content (a11y) -->
+    <a href="#main" class="skip-link">Saltar al contenido</a>
 
-    <!-- Hero Section -->
-    <section
-      id="home"
-      class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
-    >
-      <div class="absolute inset-0 overflow-hidden">
-        <div
-          class="absolute inset-0 bg-gradient-to-b from-black to-transparent z-10"
-        ></div>
-        <div class="absolute inset-0 bg-grid-lines opacity-10"></div>
-        <div class="absolute top-0 left-0 w-full h-full">
-          <div
-            class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-500 opacity-20 blur-3xl"
-          ></div>
-          <div
-            class="absolute top-2/3 right-1/4 w-64 h-64 rounded-full bg-purple-500 opacity-20 blur-3xl"
-          ></div>
-        </div>
-      </div>
+    <!-- Header / Navbar -->
+    <header class="header">
+        <nav class="nav-container container">
+            <a href="#" class="logo">Kristianc<span>Dev</span></a>
 
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center"
-      >
-        <div class="flex flex-col items-center">
-          <div
-            class="w-40 h-40 rounded-full bg-gradient-to-br from-gray-900 to-purple-400 flex items-center justify-center mb-8 neon-box pulse"
-          >
-            <img
-              src="assets/images/logo1.webp"
-              alt="KristiancDev"
-              class="w-37 h-37 rounded-full object-cover border-1 border-black bg-transparent"
-            />
-          </div>
-
-          <h1
-            class="text-5xl md:text-5xl font-bold mb-4 font-orbitron neon-text"
-          >
-            <span>Cristian Cevallos</span>
-          </h1>
-
-          <div class="relative inline-block">
-            <h2 class="text-2xl md:text-3xl font-orbitron mb-2 text-gray-300">
-              Desarrollador Full Stack
-            </h2>
-            <div
-              class="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"
-            ></div>
-          </div>
-
-          <p
-            class="text-lg md:text-xl max-w-2xl mx-auto mt-8 mb-8 text-gray-300"
-          >
-            Transformo tus ideas en soluciones digitales innovadoras, pensando
-            en tus necesidades.
-          </p>
-
-          <div class="flex space-x-4">
-            <a
-              href="#contact"
-              class="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium hover:opacity-90 transition-all duration-300 transform hover:scale-105"
-            >
-              Contáctame
-            </a>
-            <a
-              href="#projects"
-              class="px-8 py-3 border border-blue-500 text-blue-500 rounded-full font-medium hover:bg-blue-500 hover:bg-opacity-10 transition-all duration-300 transform hover:scale-105"
-            >
-              Ver Proyectos
-            </a>
-          </div>
-
-          <div class="mt-12 flex space-x-6">
-            <a
-              href="#"
-              class="social-icon text-xl text-gray-400 hover:text-blue-400"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="#"
-              class="social-icon text-xl text-gray-400 hover:text-blue-400"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a
-              href="#"
-              class="social-icon text-xl text-gray-400 hover:text-blue-400"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a
-              href="#"
-              class="social-icon text-xl text-gray-400 hover:text-blue-400"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
-      >
-        <a href="#about" class="text-gray-400 hover:text-white">
-          <i class="fas fa-chevron-down text-2xl"></i>
-        </a>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-darker">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold font-orbitron mb-4 neon-text">
-            <span>Sobre Mí</span>
-          </h2>
-          <div
-            class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"
-          ></div>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            Desarrollador con +13 años en el sector de seguros.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div class="relative">
-            <div class="bg-gray-800 rounded-xl p-1 neon-box w-full h-sm">
-              <img
-                src="assets/images/FotoPerfil_Kristian-FondoAzul.png"
-                alt="About me"
-                class="rounded-lg shadow-lg h-full w-full object-cover"
-              />
-            </div>
-            <div
-              class="absolute -bottom-5 -right-5 bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-lg shadow-lg"
-            >
-              <h3 class="text-white font-bold text-xl">13+ Años</h3>
-              <p class="text-white text-sm">Experiencia</p>
-            </div>
-          </div>
-
-          <div>
-            <h3 class="text-2xl font-bold mb-4 font-orbitron gradient-text">
-              ¿Quién soy?
-            </h3>
-            <p class="text-gray-300 mb-4">
-              Mi nombre es Cristian, soy desarrollador de software residente en
-              Ecuador.
-            </p>
-            <p class="text-gray-300 mb-4">
-              Mi expertise abarca tecnologías como
-              <strong> Visual Basic 6, C#</strong> y gestión de bases de datos
-              (<strong>Sybase, SQL Server, Oracle</strong>). He trabajado en el
-              sector de seguros, especializándome en el
-              <strong>sistema SISE.</strong>
-            </p>
-            <p class="text-gray-300 mb-4">
-              Comprometido con la innovación, continúo ampliando mis
-              conocimientos en desarrollo
-              <strong>web, móvil e inteligencia artificial</strong>
-              para ofrecer soluciones tecnológicas de vanguardia.
-            </p>
-            <div class="mb-8 mt-6">
-              <h4 class="text-xl font-semibold mb-4 text-gray-200">
-                Mis habilidades
-              </h4>
-              <div class="flex flex-wrap gap-3">
-                <span
-                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-teal-400 border border-teal-400"
-                  >VB6</span
-                >
-                <span
-                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-purple-400 border border-purple-400"
-                  >Crystal Report</span
-                >
-                <span
-                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-orange-400 border border-orange-400"
-                  >C#</span
-                >
-                <span
-                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-blue-400 border border-blue-400"
-                  >JavaScript</span
-                >
-                <span
-                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-green-400 border border-green-400"
-                  >Node.js</span
-                >
-                <span
-                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-red-400 border border-red-400"
-                  >React</span
-                >
-                <span
-                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-yellow-400 border border-yellow-400"
-                  >Aws</span
-                >
-                <span
-                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-green-300 border border-green-300"
-                  >Python</span
-                >
-                <span
-                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-pink-400 border border-pink-400"
-                  >Flutter</span
-                >
-                <span
-                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-blue-300 border border-blue-300"
-                  >Inteligencia Artificial (AI)</span
-                >
-                <span
-                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-orange-400 border border-orange-400"
-                  >Automatizaciónes</span
-                >
-                <span
-                  class="skill-badge px-4 py-2 bg-gray-800 rounded-full text-sm font-medium text-red-400 border border-red-400"
-                  >Bases de Datos</span
-                >
-              </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Sobre Mí</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Proyectos</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="#blog" class="nav-link">Insights</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link btn-contact">Contacto</a></li>
+                </ul>
             </div>
 
-            <a
-              href="/assets/pdf/CV-Cristian.pdf"
-              class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium hover:opacity-90 transition-all duration-300"
-            >
-              Descargar CV
-              <i class="fas fa-download ml-2"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Timeline -->
-        <div class="mt-24">
-          <h3
-            class="text-2xl font-bold mb-8 text-center font-orbitron gradient-text"
-          >
-            Mi Trayectoria
-          </h3>
-
-          <div class="relative pl-12 timeline">
-            <div class="mb-12 timeline-item relative">
-              <div class="bg-gray-800 p-6 rounded-xl neon-box">
-                <div class="flex items-center mb-2">
-                  <span
-                    class="bg-blue-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded"
-                    >2016 - Presente</span
-                  >
-                  <span class="text-blue-400 text-sm font-medium ml-2"
-                    >Ingeniero Senior de Desarrollo</span
-                  >
-                </div>
-                <h4 class="text-xl font-semibold text-white">
-                  HDI Seguros | Liberty Seguros
-                </h4>
-                <p class="text-gray-300 mt-2">
-                  <li>
-                    Mantenimiento y desarrolo de mejoras del CORE SISE en VB6,
-                    asegurando su estabilidad y funcionamiento óptimo.
-                  </li>
-                  <li>
-                    Migración exitosa de plataforma de facturacion electrónica a
-                    Stupendo, asegurando la continuidad y estabilidad del
-                    servicio.
-                  </li>
-                  <li>
-                    Desarrollo de APIs REST y la creación de Windows Services
-                    con C#.
-                  </li>
-                  <li>
-                    Recientemente me he integrado al equipo web, donde
-                    contribuyo con el mantenimiento y desarrollo de mejoras en
-                    portales y aplicaciones utilizando tecnologías modernas como
-                    React, Node.js, Jenkins y AWS.
-                  </li>
-                </p>
-              </div>
-            </div>
-
-            <div class="mb-12 timeline-item relative">
-              <div class="bg-gray-800 p-6 rounded-xl neon-box">
-                <div class="flex items-center mb-2">
-                  <span
-                    class="bg-purple-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded"
-                    >2015 - 2016</span
-                  >
-                  <span class="text-purple-400 text-sm font-medium ml-2"
-                    >Asistente de Sistemas</span
-                  >
-                </div>
-                <h4 class="text-xl font-semibold text-white">
-                  Medicina Prepagada Vida Sana
-                </h4>
-                <p class="text-gray-300 mt-2">
-                  <li>
-                    Soporte técnico y asistencia a usuarios internos, junto con
-                    el mantenimiento preventivo y correctivo de equipos de
-                    cómputo.
-                  </li>
-                  <li>
-                    Desarrollo y mantenimiento de módulos en VB6 para el sector
-                    de medicina prepagada.
-                  </li>
-                  <li>
-                    Búsqueda y negociación con proveedores para optimizar costos
-                    de insumos y servicios.
-                  </li>
-                  <li>
-                    Integración de información con el sistema contable GALAC,
-                    asegurando la coherencia y eficiencia de los datos.
-                  </li>
-                </p>
-              </div>
-            </div>
-
-            <div class="mb-12 timeline-item relative">
-              <div class="bg-gray-800 p-6 rounded-xl neon-box">
-                <div class="flex items-center mb-2">
-                  <span
-                    class="bg-green-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded"
-                    >2015 - 2016</span
-                  >
-                  <span class="text-green-400 text-sm font-medium ml-2"
-                    >Analista de Sistemas</span
-                  >
-                </div>
-                <h4 class="text-xl font-semibold text-white">
-                  Seguros Constitución
-                </h4>
-                <p class="text-gray-300 mt-2">
-                  <li>
-                    Desarrollo e implementación de servicio para el envío de
-                    correos masivos que mejoró significativamente los tiempos de
-                    respuesta.
-                  </li>
-                  <li>
-                    Desarrollé una demo para la migración de impresiones de
-                    Jetform a Jasper Reports utilizando Java y VB6.
-                  </li>
-                  <li>
-                    Integración el sistema SISE con el portal EnPartes mediante
-                    el consumo de web services, para ls estimación de siniestros
-                    de vehículos.
-                  </li>
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item relative">
-              <div class="bg-gray-800 p-6 rounded-xl neon-box">
-                <div class="flex items-center mb-2">
-                  <span
-                    class="bg-yellow-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded"
-                    >2012 - 2015</span
-                  >
-                  <span class="text-yellow-400 text-sm font-medium ml-2"
-                    >Desarrollador de software</span
-                  >
-                </div>
-                <h4 class="text-xl font-semibold text-white">
-                  Sistran Andina S.A.
-                </h4>
-                <p class="text-gray-300 mt-2">
-                  <li>
-                    Desarrollo en motores de Bases de Datos en Sybase, SQL
-                    Server y Oracle; creación y optimización de stored
-                    procedures, triggers, etc.
-                  </li>
-                  <li>
-                    Soporte y Mantenimiento del sistema SISE a importantes
-                    aseguradoras de Ecuador.
-                  </li>
-                  <li>
-                    Desarrollo de informes y reportes con Crystal Reports y
-                    Excel, participación en migraciones de bases de datos y
-                    código fuente.
-                  </li>
-                  <li>
-                    Revisión de estructuras para cumplir con regulaciones de
-                    entidades de control como SCVS (S01, S02, S03, S05, S07,
-                    S08, S09), UAFE y SRI (ATS, Form 103, Form 104) y procesos
-                    alineados con la normativa vigente.
-                  </li>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-black bg-opacity-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold font-orbitron mb-4 neon-text">
-            <span>Mis Servicios</span>
-          </h2>
-          <div
-            class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"
-          ></div>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            Soluciones personalizadas para llevar tus ideas al mundo digital.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Service 1 -->
-          <div
-            class="bg-gray-900 rounded-xl p-8 border border-gray-800 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2"
-          >
-            <div
-              class="w-16 h-16 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-6 neon-box"
-            >
-              <i class="fas fa-server text-2xl text-blue-400"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-white">
-              Mantenimiento SISE
-            </h3>
-            <p class="text-gray-300 mb-4">
-              Servicio especializado en el mantenimiento y desarrollo del
-              sistema de seguros SISE, garantizando máxima eficiencia y
-              disponibilidad.
-            </p>
-            <ul class="space-y-2 text-gray-400">
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-blue-400 mr-2"></i>
-                Ordenes de trabajo
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-blue-400 mr-2"></i>
-                Soporte técnico
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-blue-400 mr-2"></i>
-                Integración de sistemas
-              </li>
-            </ul>
-          </div>
-
-          <!-- Service 2 -->
-          <div
-            class="bg-gray-900 rounded-xl p-8 border border-gray-800 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-2"
-          >
-            <div
-              class="w-16 h-16 bg-purple-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-6 neon-box-secondary"
-            >
-              <i class="fas fa-globe text-2xl text-purple-400"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-white">Páginas Web</h3>
-            <p class="text-gray-300 mb-4">
-              Diseño y desarrollo de sitios web modernos, responsivos y
-              optimizados para SEO que destacan tu marca en internet.
-            </p>
-            <ul class="space-y-2 text-gray-400">
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-purple-400 mr-2"></i>
-                Diseño personalizado
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-purple-400 mr-2"></i>
-                Mobile First
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-purple-400 mr-2"></i>
-                Optimización SEO
-              </li>
-            </ul>
-          </div>
-
-          <!-- Service 3 -->
-          <div
-            class="bg-gray-900 rounded-xl p-8 border border-gray-800 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-2"
-          >
-            <div
-              class="w-16 h-16 bg-green-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-6 neon-box"
-              style="box-shadow: 0 0 10px #10b981, 0 0 20px #10b981"
-            >
-              <i class="fas fa-laptop-code text-2xl text-green-400"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-white">
-              Sistemas Personalizados
-            </h3>
-            <p class="text-gray-300 mb-4">
-              Desarrollo de software a medida que se adapta perfectamente a las
-              necesidades específicas de tu negocio o proyecto.
-            </p>
-            <ul class="space-y-2 text-gray-400">
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                Análisis de requerimientos
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                Desarrollo ágil
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                Entregas incrementales
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-darker">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold font-orbitron mb-4 neon-text">
-            <span>Mis Proyectos</span>
-          </h2>
-          <div
-            class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"
-          ></div>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            Una selección de mis trabajos más recientes y destacados en
-            diferentes áreas de desarrollo.
-          </p>
-        </div>
-
-        <!-- Project Filters -->
-        <div class="flex flex-wrap justify-center gap-3 mb-12">
-          <button
-            class="px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-medium filter-btn active"
-            data-filter="all"
-          >
-            Todos
-          </button>
-          <button
-            class="px-4 py-2 bg-gray-800 text-gray-300 hover:text-white rounded-full text-sm font-medium filter-btn"
-            data-filter="desktop"
-          >
-            Escritorio
-          </button>
-          <button
-            class="px-4 py-2 bg-gray-800 text-gray-300 hover:text-white rounded-full text-sm font-medium filter-btn"
-            data-filter="backend"
-          >
-            BackEnd
-          </button>
-          <button
-            class="px-4 py-2 bg-gray-800 text-gray-300 hover:text-white rounded-full text-sm font-medium filter-btn"
-            data-filter="frontend"
-          >
-            FrontEnd
-          </button>
-          <button
-            class="px-4 py-2 bg-gray-800 text-gray-300 hover:text-white rounded-full text-sm font-medium filter-btn"
-            data-filter="mobile"
-          >
-            Móvil
-          </button>
-          <button
-            class="px-4 py-2 bg-gray-800 text-gray-300 hover:text-white rounded-full text-sm font-medium filter-btn"
-            data-filter="ia"
-          >
-            IA - Proximamente
-          </button>
-        </div>
-
-        <!-- Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project 1 - Desktop -->
-          <div
-            class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
-            data-category="desktop"
-          >
-            <div class="relative overflow-hidden h-48">
-              <img
-                src="https://www.sistran.com/latam/wp-content/uploads/2021/09/Imagen_Soluciones_SISE-01.jpg"
-                alt="Project 1"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
-              ></div>
-              <div class="absolute bottom-4 left-4">
-                <span
-                  class="bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >Escritorio</span
-                >
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 text-white">
-                SISE - Sistema integral para compañías de seguros
-              </h3>
-              <p class="text-gray-300 mb-4">
-                SISE es un sistema integral para la administración de seguros,
-                diseñado para apoyar áreas operativas y administrativas.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="text-xs bg-gray-800 text-blue-400 px-2 py-1 rounded"
-                  >VB6</span
-                >
-                <span
-                  class="text-xs bg-gray-800 text-green-400 px-2 py-1 rounded"
-                  >Sybase</span
-                >
-                <span
-                  class="text-xs bg-gray-800 text-yellow-400 px-2 py-1 rounded"
-                  >Sql Server</span
-                >
-                <span
-                  class="text-xs bg-gray-800 text-orange-400 px-2 py-1 rounded"
-                  >Oracle</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2 - Backend -->
-          <div
-            class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
-            data-category="frontend"
-          >
-            <div class="relative overflow-hidden h-48">
-              <img
-                src="assets/images/Projects/ModaSmart.webp"
-                alt="Moda Smart POS"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
-              ></div>
-              <div class="absolute bottom-4 left-4">
-                <span
-                  class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >FrontEnd</span
-                >
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 text-white">Moda Smart POS</h3>
-              <p class="text-gray-300 mb-4">
-                Sistema POS ágil para tiendas de ropa y accesorios. Simplifica
-                ventas, inventario y clientes, elevando tu negocio de moda al
-                siguiente nivel.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="text-xs bg-gray-800 text-blue-400 px-2 py-1 rounded"
-                  >React</span
-                >
-                <span
-                  class="text-xs bg-gray-800 text-green-400 px-2 py-1 rounded"
-                  >Node.js</span
-                >
-                <span
-                  class="text-xs bg-gray-800 text-yellow-400 px-2 py-1 rounded"
-                  >Supabase</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 - Frontend -->
-          <div
-            class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
-            data-category="frontend"
-          >
-            <div class="relative overflow-hidden h-48">
-              <img
-                src="assets/images/Projects/MiClubFit.webp"
-                alt="Sistema Gimanasios"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
-              ></div>
-              <div class="absolute bottom-4 left-4">
-                <span
-                  class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >FrontEnd</span
-                >
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 text-white">
-                Mi Club Fit - Sistema de Gimnasios
-              </h3>
-              <p class="text-gray-300 mb-4">
-                Gestiona tu gimnasio de forma inteligente. Controla membresías,
-                inventario, máquinas y asistencia QR, optimizando la experiencia
-                de tus clientes y tu operación.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="text-xs bg-gray-800 text-blue-400 px-2 py-1 rounded"
-                  >React</span
-                >
-                <span
-                  class="text-xs bg-gray-800 text-purple-400 px-2 py-1 rounded"
-                  >Redux</span
-                >
-                <span
-                  class="text-xs bg-gray-800 text-green-400 px-2 py-1 rounded"
-                  >TailwindCSS</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4 - Mobile -->
-          <div
-            class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
-            data-category="mobile"
-          >
-            <div class="relative overflow-hidden h-48">
-              <img
-                src="https://i.ytimg.com/vi/725sQ0Odvok/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLChQsy7WIkjHuzgo7fvFf0-0DPhKA"
-                alt="App de Seguros"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
-              ></div>
-              <div class="absolute bottom-4 left-4">
-                <span
-                  class="bg-pink-500 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >Móvil</span
-                >
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 text-white">App de Seguros</h3>
-              <p class="text-gray-300 mb-4">
-                Aplicación móvil para cotizar, contratar y gestionar seguros.
-                Permite reportar y consultar el estado de siniestros, revisar
-                cartera, realizar pagos y acceder a múltiples asistencias (vial,
-                médica, hogar, legal).
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="text-xs bg-gray-800 text-blue-400 px-2 py-1 rounded"
-                  >Flutter</span
-                >
-                <span class="text-xs bg-gray-800 text-red-400 px-2 py-1 rounded"
-                  >Firebase</span
-                >
-                <span
-                  class="text-xs bg-gray-800 text-purple-400 px-2 py-1 rounded"
-                  >BLoC</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 5 - Backend -->
-          <div
-            class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
-            data-category="backend"
-          >
-            <div class="relative overflow-hidden h-48">
-              <img
-                src="https://miro.medium.com/v2/resize:fit:1400/1*ouGNpxECScUENqbW8P7TOA.png"
-                alt="Microservicios de Pagos"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
-              ></div>
-              <div class="absolute bottom-4 left-4">
-                <span
-                  class="bg-purple-500 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >BackEnd</span
-                >
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 text-white">
-                Microservicios de Pagos
-              </h3>
-              <p class="text-gray-300 mb-4">
-                Es una arquitectura robusta y flexible diseñada para el
-                procesamiento eficiente y seguro de primas de seguros. Facilita
-                transacciones ágiles y escalables, optimizando la gestión
-                financiera.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="text-xs bg-gray-800 text-yellow-400 px-2 py-1 rounded"
-                  >Python</span
-                >
-                <span
-                  class="text-xs bg-gray-800 text-green-400 px-2 py-1 rounded"
-                  >FastAPI</span
-                >
-                <span
-                  class="text-xs bg-gray-800 text-blue-400 px-2 py-1 rounded"
-                  >Docker</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 6 - Frontend -->
-          <div
-            class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
-            data-category="frontend"
-          >
-            <div class="relative overflow-hidden h-48">
-              <img
-                src="assets/images/Projects/MedicoPlan.webp"
-                alt="Dashboard Analítico"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
-              ></div>
-              <div class="absolute bottom-4 left-4">
-                <span
-                  class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >FrontEnd</span
-                >
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 text-white">
-                MedicoPlan - Sistema de Consulta de Planes Médicos
-              </h3>
-              <p class="text-gray-300 mb-4">
-                Plataforma web esencial para medicina prepagada y asistencia
-                médica. Permite consultar planes, coberturas, copagos, fees y
-                exclusiones de forma clara y rápida.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="text-xs bg-gray-800 text-blue-400 px-2 py-1 rounded"
-                  >Vue.js</span
-                >
-                <span
-                  class="text-xs bg-gray-800 text-purple-400 px-2 py-1 rounded"
-                  >Chart.js</span
-                >
-                <span
-                  class="text-xs bg-gray-800 text-green-400 px-2 py-1 rounded"
-                  >Vuetify</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-12">
-          <a
-            href="#"
-            class="inline-flex items-center px-8 py-3 border border-blue-500 text-blue-500 rounded-full font-medium hover:bg-blue-500 hover:bg-opacity-10 transition-all duration-300"
-          >
-            Ver más proyectos
-            <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="py-20 bg-black bg-opacity-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold font-orbitron mb-4 neon-text">
-            <span>Mi Blog</span>
-          </h2>
-          <div
-            class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"
-          ></div>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            Artículos y tutoriales sobre desarrollo, tecnología y buenas
-            prácticas en el mundo del software.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Blog Post 1 -->
-          <div
-            class="blog-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
-          >
-            <div class="relative overflow-hidden h-48">
-              <img
-                src="https://www.freecodecamp.org/espanol/news/content/images/2024/12/Youtube--1-.png"
-                alt="Blog Post 1"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
-              ></div>
-              <div class="absolute bottom-4 left-4">
-                <span
-                  class="bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >Desarrollo</span
-                >
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="flex items-center text-sm text-gray-400 mb-3">
-                <span>15 Junio 2023</span>
-                <span class="mx-2">•</span>
-                <span>5 min lectura</span>
-              </div>
-              <h3 class="text-xl font-bold mb-3 text-white">
-                Optimizando APIs con Node.js
-              </h3>
-              <p class="text-gray-300 mb-4">
-                Técnicas avanzadas para mejorar el rendimiento de tus APIs
-                construidas con Node.js y Express.
-              </p>
-              <a
-                href="#"
-                class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
-              >
-                Leer más
-                <i class="fas fa-arrow-right ml-2"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Blog Post 2 -->
-          <div
-            class="blog-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
-          >
-            <div class="relative overflow-hidden h-48">
-              <img
-                src="https://pbs.twimg.com/media/FPGnJI4XEAAQSXU?format=jpg&name=4096x4096"
-                alt="Blog Post 2"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
-              ></div>
-              <div class="absolute bottom-4 left-4">
-                <span
-                  class="bg-purple-500 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >Frontend</span
-                >
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="flex items-center text-sm text-gray-400 mb-3">
-                <span>28 Mayo 2023</span>
-                <span class="mx-2">•</span>
-                <span>8 min lectura</span>
-              </div>
-              <h3 class="text-xl font-bold mb-3 text-white">
-                React 18: Novedades
-              </h3>
-              <p class="text-gray-300 mb-4">
-                Exploramos las nuevas características de React 18 y cómo pueden
-                beneficiar tus proyectos.
-              </p>
-              <a
-                href="#"
-                class="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium"
-              >
-                Leer más
-                <i class="fas fa-arrow-right ml-2"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Blog Post 3 -->
-          <div
-            class="blog-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
-          >
-            <div class="relative overflow-hidden h-48">
-              <img
-                src="https://www.akamai.com/site/es/images/article/2023/how-a-web-api-works.png"
-                alt="Blog Post 3"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
-              ></div>
-              <div class="absolute bottom-4 left-4">
-                <span
-                  class="bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded"
-                  >Seguridad</span
-                >
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="flex items-center text-sm text-gray-400 mb-3">
-                <span>10 Abril 2023</span>
-                <span class="mx-2">•</span>
-                <span>12 min lectura</span>
-              </div>
-              <h3 class="text-xl font-bold mb-3 text-white">
-                Seguridad en APIs REST
-              </h3>
-              <p class="text-gray-300 mb-4">
-                Guía completa para implementar medidas de seguridad efectivas en
-                tus APIs RESTful.
-              </p>
-              <a
-                href="#"
-                class="inline-flex items-center text-green-400 hover:text-green-300 font-medium"
-              >
-                Leer más
-                <i class="fas fa-arrow-right ml-2"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-12">
-          <a
-            href="#"
-            class="inline-flex items-center px-8 py-3 border border-purple-500 text-purple-500 rounded-full font-medium hover:bg-purple-500 hover:bg-opacity-10 transition-all duration-300"
-          >
-            Ver todos los artículos
-            <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-darker">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold font-orbitron mb-4 neon-text">
-            <span>Contáctame</span>
-          </h2>
-          <div
-            class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"
-          ></div>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-            ¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte a
-            hacerlo realidad.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <form
-              ction="https://formspree.io/f/mkgreand"
-              method="POST"
-              class="space-y-6"
-            >
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    for="name"
-                    class="block text-sm font-medium text-gray-300 mb-2"
-                    >Nombre</label
-                  >
-                  <input
-                    type="text"
-                    id="name"
-                    class="w-full px-4 py-3 rounded-lg input-field focus:ring-2 focus:ring-blue-500 text-white"
-                    placeholder="Tu nombre"
-                  />
-                </div>
-                <div>
-                  <label
-                    for="email"
-                    class="block text-sm font-medium text-gray-300 mb-2"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    class="w-full px-4 py-3 rounded-lg input-field focus:ring-2 focus:ring-blue-500 text-white"
-                    placeholder="tu@email.com"
-                  />
-                </div>
-              </div>
-              <div>
-                <label
-                  for="subject"
-                  class="block text-sm font-medium text-gray-300 mb-2"
-                  >Asunto</label
-                >
-                <input
-                  type="text"
-                  id="subject"
-                  class="w-full px-4 py-3 rounded-lg input-field focus:ring-2 focus:ring-blue-500 text-white"
-                  placeholder="¿Sobre qué quieres hablar?"
-                />
-              </div>
-              <div>
-                <label
-                  for="message"
-                  class="block text-sm font-medium text-gray-300 mb-2"
-                  >Mensaje</label
-                >
-                <textarea
-                  id="message"
-                  rows="5"
-                  class="w-full px-4 py-3 rounded-lg input-field focus:ring-2 focus:ring-blue-500 text-white"
-                  placeholder="Cuéntame sobre tu proyecto..."
-                ></textarea>
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  class="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-all duration-300"
-                >
-                  Enviar Mensaje
-                  <i class="fas fa-paper-plane ml-2"></i>
+            <div class="nav-actions">
+                <button aria-label="Cambiar tema" id="theme-toggle" class="theme-btn">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
                 </button>
-              </div>
-            </form>
-          </div>
-
-          <div>
-            <div
-              class="bg-gray-900 rounded-xl p-8 h-full border border-gray-800 neon-box"
-            >
-              <h3 class="text-2xl font-bold mb-6 text-white font-orbitron">
-                Información de Contacto
-              </h3>
-
-              <div class="space-y-6">
-                <div class="flex items-start">
-                  <div
-                    class="flex-shrink-0 bg-blue-500 bg-opacity-20 p-3 rounded-lg"
-                  >
-                    <i class="fas fa-envelope text-blue-400 text-xl"></i>
-                  </div>
-                  <div class="ml-4">
-                    <h4 class="text-lg font-semibold text-gray-200">Email</h4>
-                    <a
-                      href="mailto:contacto@kristiancdev.com"
-                      class="text-blue-400 hover:text-blue-300"
-                      >kristiancdev@gmail.com</a
-                    >
-                  </div>
-                </div>
-
-                <div class="flex items-start">
-                  <div
-                    class="flex-shrink-0 bg-purple-500 bg-opacity-20 p-3 rounded-lg"
-                  >
-                    <i class="fas fa-phone-alt text-purple-400 text-xl"></i>
-                  </div>
-                  <div class="ml-4">
-                    <h4 class="text-lg font-semibold text-gray-200">
-                      Teléfono
-                    </h4>
-                    <a
-                      href="tel:+1234567890"
-                      class="text-purple-400 hover:text-purple-300"
-                      >+(593) 97 924 0389</a
-                    >
-                  </div>
-                </div>
-
-                <div class="flex items-start">
-                  <div
-                    class="flex-shrink-0 bg-green-500 bg-opacity-20 p-3 rounded-lg"
-                  >
-                    <i class="fas fa-map-marker-alt text-green-400 text-xl"></i>
-                  </div>
-                  <div class="ml-4">
-                    <h4 class="text-lg font-semibold text-gray-200">
-                      Ubicación
-                    </h4>
-                    <p class="text-gray-300">Quito, Ecuador</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-12">
-                <h4 class="text-lg font-semibold text-gray-200 mb-4">
-                  Sígueme en redes
-                </h4>
-                <div class="flex space-x-4">
-                  <a
-                    href="http://github.com/kristiancdev"
-                    class="social-icon w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl text-gray-300 hover:text-blue-400"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/cristiancevallos/"
-                    class="social-icon w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl text-gray-300 hover:text-blue-400"
-                  >
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a
-                    href="https://x.com/KristiancDev"
-                    class="social-icon w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl text-gray-300 hover:text-blue-400"
-                  >
-                    <i class="fab fa-x"></i>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/kristiancdev/"
-                    class="social-icon w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl text-gray-300 hover:text-pink-400"
-                  >
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                  <a
-                    href="https://www.youtube.com/@KristiancDev/"
-                    class="social-icon w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl text-gray-300 hover:text-red-400"
-                  >
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                </div>
-              </div>
+                <button aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu"
+                    class="nav-toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" id="main">
+        <!-- Hero Section -->
+        <section class="home section" id="home">
+            <div class="home-container container grid">
+                <div class="home-data">
+                    <h2>Cristian Cevallos</h2>
+                    <h1 class="home-title">
+                        <span>Desarrollador Full Stack especializado en InsurTech</span>
+                    </h1>
+                    <p class="home-description">
+                        +14 años en el sector seguros: experto en sistema SISE, ahora construyendo
+                        el futuro con IA, APIs y aplicaciones web inteligentes. </p>
+                    <div class="home-buttons">
+                        <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+                        <a href="#contact" class="btn btn-secondary">Conectar <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="home-img-wrapper">
+                    <!-- Placeholder Imagen. El usuario debe subir la suya o se puede usar de UI Faces -->
+                    <div class="home-img">
+                        <img src="./images/Kristian.png" alt="Cristian Cevallos Profesional">
+                    </div>
+                    <div class="home-glow"></div>
+                </div>
+            </div>
+            <div class="home-scroll">
+                <a href="#about" class="scroll-btn">
+                    <span class="mouse">
+                        <span class="wheel"></span>
+                    </span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sobre Mí</h2>
+                    <!-- <p class="section-subtitle">Mi historia, evolución y visión</p> -->
+                </div>
+
+                <div class="about-container grid">
+                    <!-- COLUMNA IZQUIERDA: BIO -->
+                    <div class="about-data reveal">
+
+                        <!-- NUEVO: Stats Bar para anclaje visual rápido -->
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <i class="fa-solid fa-calendar-check"></i>
+                                <span>+14 Años en Seguros</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fa-solid fa-code"></i>
+                                <span>SISE & IA</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Quito, Ecuador</span>
+                            </div>
+                        </div>
+
+                        <p class="about-text">
+                            Soy <strong>Cristian Cevallos</strong>, desarrollador apasionado por la innovación
+                            tecnológica.
+                            Vivo en Quito y llevo <strong>+14 años en el sector asegurador</strong>.
+                            Mi historia empezó con <strong>Visual Basic 6</strong>: solo curiosidad por construir cosas
+                            que funcionen.
+                            Esa curiosidad fue la puerta a mi primer empleo y al mundo de los seguros.
+                        </p>
+
+                        <p class="about-text">
+                            Soy <strong>autodidacta por naturaleza</strong>: entender el avance tecnológico me ha
+                            llevado
+                            a dominar desde sistemas legacy (<strong>SISE, SQL Server, Oracle</strong>)
+                            hasta tecnologías de vanguardia: <strong>IA, LLMs, automatizaciones y agentes
+                                inteligentes</strong>.
+                        </p>
+
+                        <!-- NUEVO: Highlight Box para el Diplomado -->
+                        <div class="highlight-box">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Actualmente curso un <strong>Diplomado en Seguros</strong> para profundizar
+                                en procesos de negocio, suscripción, siniestros y reaseguros.</span>
+                        </div>
+
+                        <p class="about-text">
+                            <strong>¿Mi diferencia?</strong> Entiendo el negocio de seguros desde adentro.
+                            No solo escribo código: traduzco procesos complejos en soluciones que
+                            ahorran tiempo, reducen costos y simplifican el trabajo de las personas.
+                        </p>
+                        <div class="personal-note reveal">
+                            <p>
+                                Fuera de la pantalla, mi motor es mi familia. Disfruto del fútbol y salir a acampar
+                                para recargar energías; creo que una mente fresca construye mejor software.
+                                ⚽
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- COLUMNA DERECHA: TIMELINE -->
+                    <div class="about-timeline reveal">
+                        <h3 class="timeline-title"><i class="fa-solid fa-route"></i> Evolución Profesional</h3>
+
+                        <div class="timeline-items">
+                            <!-- Item 1 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-date">2012 - Inicio</h4>
+                                    <h3 class="timeline-job">Desarrollo Base</h3>
+                                    <p class="timeline-desc">
+                                        Visual Basic 6.0, Sybase, Oracle y SQL Server. Aprendí los fundamentos:
+                                        lógica de negocios, optimización y cómo piensan las aseguradoras.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-date">2014-2018 - Especialización</h4>
+                                    <h3 class="timeline-job">Experto en SISE & Legacy</h3>
+                                    <p class="timeline-desc">
+                                        Dominio del sistema SISE. Migración de procesos manuales
+                                        a automatizados. Reducción en tiempos de operación hasta 60%.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-date">2019-2021 - Evolución</h4>
+                                    <h3 class="timeline-job">Modernización & C#</h3>
+                                    <p class="timeline-desc">
+                                        Transición a .NET, C# y arquitecturas web. Creación de APIs y SPAs
+                                        que conectan sistemas legacy con el mundo moderno.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-date">2022-2023 - Liderazgo</h4>
+                                    <h3 class="timeline-job">Arquitectura Cloud & DevOps</h3>
+                                    <p class="timeline-desc">
+                                        Adopción de arquitecturas escalables, cloud y pipelines CI/CD.
+                                        Integración al equipo Web: estandarización de
+                                        buenas prácticas y cultura de mejora continua.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 5 (Active) -->
+                            <div class="timeline-item active">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4 class="timeline-date">2024-Actualidad - Innovación</h4>
+                                    <h3 class="timeline-job">IA & Transformación Digital</h3>
+                                    <p class="timeline-desc">
+                                        Python, Flutter, LLMs y automatización inteligente. Creación de
+                                        agentes de IA que resuelven problemas reales del día a día en seguros.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Proyectos Destacados</h2>
+                    <p class="section-subtitle">Demostración de ejecución y capacidad técnica</p>
+                </div>
+
+                <!-- Filters mejorados con contador -->
+                <div class="portfolio-filters reveal" role="tablist" aria-label="Filtros de proyectos">
+                    <button class="filter-btn active-filter" data-filter="all" aria-pressed="true">Todos</button>
+                    <button class="filter-btn" data-filter=".seguros" aria-pressed="false">Seguros</button>
+                    <button class="filter-btn" data-filter=".saas" aria-pressed="false">SaaS / Emprendimiento</button>
+                    <button class="filter-btn" data-filter=".ia" aria-pressed="false">Experimentos IA</button>
+                    <span class="filter-count" aria-live="polite">Mostrando <strong>4</strong> proyectos</span>
+                </div>
+
+                <div class="portfolio-container grid">
+
+                    <!-- Proyecto 1: Seguros -->
+                    <article class="portfolio-card mix seguros reveal" data-category="seguros">
+                        <div class="portfolio-img-box">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                                alt="Automatizaciones Seguros - Pipeline OCR + LLM" class="portfolio-img"
+                                loading="lazy">
+
+                            <!-- Overlay mejorado con métrica y acciones -->
+                            <div class="portfolio-hover">
+                                <span class="portfolio-status">
+                                    <i class="fa-solid fa-circle-check"></i> Producción
+                                </span>
+                                <div class="portfolio-metric">
+                                    <strong>-70%</strong>
+                                    <span>tiempo procesamiento</span>
+                                </div>
+                                <div class="portfolio-actions">
+                                    <a href="#" class="btn-action" aria-label="Ver demo del proyecto">
+                                        <i class="fa-solid fa-eye"></i> Demo
+                                    </a>
+                                    <a href="#" class="btn-action secondary" aria-label="Ver código en GitHub">
+                                        <i class="fa-brands fa-github"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Validador de Certificados (OCR + LLM)</h3>
+
+                            <div class="portfolio-meta">
+                                <span class="meta-item"><i class="fa-solid fa-bolt"></i> Automatización</span>
+                                <span class="meta-item"><i class="fa-solid fa-building"></i> Aseguradoras</span>
+                            </div>
+
+                            <p class="portfolio-desc">
+                                <strong>Problema:</strong> Cuellos de botella en lectura y clasificación manual de
+                                pólizas.
+                            </p>
+                            <p class="portfolio-desc">
+                                <strong>Solución:</strong> Pipeline automatizado con OCR clásico + LLMs para extracción
+                                inteligente.
+                            </p>
+
+                            <div class="portfolio-impact">
+                                <i class="fa-solid fa-chart-line"></i>
+                                <span>Reducción del 70% en tiempos de procesamiento de siniestros</span>
+                            </div>
+
+                            <div class="portfolio-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">OpenAI</span>
+                                <span class="tag">Tesseract</span>
+                                <span class="tag">AWS API</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 2: SaaS Extracta -->
+                    <article class="portfolio-card mix saas reveal" data-category="saas">
+                        <div class="portfolio-img-box">
+                            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80"
+                                alt="Extracta SaaS - Extracción de datos con IA" class="portfolio-img" loading="lazy">
+
+                            <div class="portfolio-hover">
+                                <span class="portfolio-status">
+                                    <i class="fa-solid fa-rocket"></i> MVP Validado
+                                </span>
+                                <div class="portfolio-metric">
+                                    <strong>+3</strong>
+                                    <span>clientes iniciales</span>
+                                </div>
+                                <div class="portfolio-actions">
+                                    <a href="#" class="btn-action"><i class="fa-solid fa-eye"></i> Demo</a>
+                                    <a href="#" class="btn-action secondary"><i class="fa-brands fa-github"></i>
+                                        Code</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Extracta (Plataforma SaaS)</h3>
+
+                            <div class="portfolio-meta">
+                                <span class="meta-item"><i class="fa-solid fa-cloud"></i> SaaS B2B</span>
+                                <span class="meta-item"><i class="fa-solid fa-users"></i> PYMES</span>
+                            </div>
+
+                            <p class="portfolio-desc">
+                                <strong>Problema:</strong> PYMES necesitan extraer datos de facturas y PDFs no
+                                estructurados.
+                            </p>
+                            <p class="portfolio-desc">
+                                <strong>Solución:</strong> Plataforma que convierte documentos en JSONs estructurados
+                                automáticamente.
+                            </p>
+
+                            <div class="portfolio-impact">
+                                <i class="fa-solid fa-chart-line"></i>
+                                <span>MVP validado: horas operativas ahorradas semanalmente</span>
+                            </div>
+
+                            <div class="portfolio-tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">Supabase</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">LLM</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 3: IA Experimentos -->
+                    <article class="portfolio-card mix ia reveal" data-category="ia">
+                        <div class="portfolio-img-box">
+                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80"
+                                alt="Agentes Autónomos con IA para Seguros" class="portfolio-img" loading="lazy">
+
+                            <div class="portfolio-hover">
+                                <span class="portfolio-status">
+                                    <i class="fa-solid fa-flask"></i> PoC Exitosa
+                                </span>
+                                <div class="portfolio-metric">
+                                    <strong>90%</strong>
+                                    <span>precisión en cotizaciones</span>
+                                </div>
+                                <div class="portfolio-actions">
+                                    <a href="#" class="btn-action"><i class="fa-solid fa-eye"></i> Demo</a>
+                                    <a href="#" class="btn-action secondary"><i class="fa-brands fa-github"></i>
+                                        Code</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Agente de Seguros (Claims)</h3>
+
+                            <div class="portfolio-meta">
+                                <span class="meta-item"><i class="fa-solid fa-robot"></i> IA Agent</span>
+                                <span class="meta-item"><i class="fa-solid fa-flask"></i> R&D</span>
+                            </div>
+
+                            <p class="portfolio-desc">
+                                <strong>Problema:</strong> Tareas rutinarias de cotización repetitivas y manuales.
+                            </p>
+                            <p class="portfolio-desc">
+                                <strong>Solución:</strong> Agente con LangChain que consulta tarifas, propone opciones e
+                                integra CRM.
+                            </p>
+
+                            <div class="portfolio-impact">
+                                <i class="fa-solid fa-chart-line"></i>
+                                <span>PoC exitosa con 90% de precisión en cotizaciones estándar</span>
+                            </div>
+
+                            <div class="portfolio-tags">
+                                <span class="tag">LangChain</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">RAG</span>
+                                <span class="tag">OpenAI</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 4: SaaS AsisMedico -->
+                    <article class="portfolio-card mix saas reveal" data-category="saas">
+                        <div class="portfolio-img-box">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                                alt="AsisMedico - Gestión clínica digital" class="portfolio-img" loading="lazy">
+
+                            <div class="portfolio-hover">
+                                <span class="portfolio-status">
+                                    <i class="fa-solid fa-circle-check"></i> En Producción
+                                </span>
+                                <div class="portfolio-metric">
+                                    <strong>+5</strong>
+                                    <span>clínicas activas</span>
+                                </div>
+                                <div class="portfolio-actions">
+                                    <a href="#" class="btn-action"><i class="fa-solid fa-eye"></i> Demo</a>
+                                    <a href="#" class="btn-action secondary"><i class="fa-brands fa-github"></i>
+                                        Code</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">AsisMedico</h3>
+
+                            <div class="portfolio-meta">
+                                <span class="meta-item"><i class="fa-solid fa-hospital"></i> Salud</span>
+                                <span class="meta-item"><i class="fa-solid fa-calendar-check"></i> Agenda Digital</span>
+                            </div>
+
+                            <p class="portfolio-desc">
+                                <strong>Problema:</strong> Gestión ineficiente de historiales clínicos y turnos en
+                                consultorios.
+                            </p>
+                            <p class="portfolio-desc">
+                                <strong>Solución:</strong> Sistema web para agendar citas, historia clínica digital y
+                                facturación.
+                            </p>
+
+                            <div class="portfolio-impact">
+                                <i class="fa-solid fa-chart-line"></i>
+                                <span>Digitalización de clínicas con mejor seguimiento de pacientes</span>
+                            </div>
+
+                            <div class="portfolio-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">REST API</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Servicios</h2>
+                    <p class="section-subtitle">Soluciones de alto valor para negocios y corporaciones</p>
+                </div>
+
+                <div class="services-container grid">
+
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+                        <h3 class="service-title">Consultoría en IA Aplicada</h3>
+                        <p class="service-desc">Implementación de LLMs, agentes autónomos y automatización inteligente
+                            de flujos de trabajo.</p>
+                        <a href="https://calendly.com/tu-link-aqui" target="_blank" class="service-btn">Agendar reunión
+                            <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="service-title">Soluciones para Seguros</h3>
+                        <p class="service-desc">Diseño de arquitecturas híbridas (OCR + IA), optimización de cotizadores
+                            y core systems.</p>
+                        <a href="#contact" class="service-btn">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-cloud"></i></div>
+                        <h3 class="service-title">Arquitectura SaaS</h3>
+                        <p class="service-desc">Diseño de infraestructura escalable de productos digitales (MVPs,
+                            plataformas cloud).</p>
+                        <a href="#contact" class="service-btn">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="service-title">Integración & Modernización</h3>
+                        <p class="service-desc">Migración de sistemas legacy y creación de ecosistemas de APIs seguras y
+                            eficientes.</p>
+                        <a href="#contact" class="service-btn">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog / Insights Section -->
+        <section class="blog section" id="blog">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Insights & Artículos</h2>
+                    <p class="section-subtitle">Reflexiones sobre IA, Seguros y Tecnología</p>
+                </div>
+
+                <div class="blog-container grid">
+
+                    <article class="blog-card reveal">
+                        <div class="blog-img-box">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
+                                alt="IA en Seguros" class="blog-img">
+                            <div class="blog-tag">Seguros & IA</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">Octubre 15, 2023</span>
+                            <h3 class="blog-title"><a href="#">El futuro de la suscripción de riesgos con Agentes
+                                    Autónomos</a></h3>
+                            <p class="blog-desc">Cómo los modelos de lenguaje están transformando la manera en que
+                                analizamos el riesgo.</p>
+                            <a href="#" class="blog-link">Leer artículo <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card reveal">
+                        <div class="blog-img-box">
+                            <img src="https://images.unsplash.com/photo-1542621334-a25e27281f6d?auto=format&fit=crop&w=800&q=80"
+                                alt="MVPs" class="blog-img">
+                            <div class="blog-tag">Producto</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">Noviembre 02, 2023</span>
+                            <h3 class="blog-title"><a href="#">Construyendo un SaaS escalable en 30 días: El caso
+                                    Extracta</a></h3>
+                            <p class="blog-desc">Lecciones aprendidas arquitectando un pipeline de extracción de datos
+                                masivo con OCR y LLMs.</p>
+                            <a href="#" class="blog-link">Leer artículo <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Conectemos</h2>
+                    <p class="section-subtitle">¿Tienes un proyecto en mente o buscas optimizar procesos?</p>
+                </div>
+
+                <div class="contact-container grid">
+
+                    <!-- COLUMNA IZQUIERDA: Info + Trust Signals -->
+                    <div class="contact-data reveal">
+                        <h3 class="contact-title">Información de Contacto</h3>
+                        <p class="contact-desc">
+                            Estoy disponible para consultorías, proyectos corporativos y charlas sobre innovación
+                            técnica en el sector asegurador.
+                        </p>
+
+                        <!-- Trust Badge -->
+                        <div class="availability-badge">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Disponible para nuevos proyectos</span>
+                            <small class="response-time">⚡ Respondo en 24-48 horas</small>
+                        </div>
+
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="contact-subtitle">Email</h4>
+                                    <a href="mailto:kristiancdev@gmail.com" class="contact-text">
+                                        kristiancdev@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+                                <div>
+                                    <h4 class="contact-subtitle">LinkedIn</h4>
+                                    <a href="https://linkedin.com/in/cristiancevallos" target="_blank"
+                                        rel="noopener noreferrer" class="contact-text">
+                                        linkedin.com/in/cristiancevallos
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div>
+                                    <h4 class="contact-subtitle">GitHub</h4>
+                                    <a href="https://github.com/kristiancdev" target="_blank" rel="noopener noreferrer"
+                                        class="contact-text">
+                                        github.com/kristiancdev
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-cta-group">
+                            <a href="https://calendly.com/kristiancdev" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-primary btn-calendar">
+                                <i class="fa-regular fa-calendar-check"></i>
+                                Agendar Llamada Gratuita
+                            </a>
+                            <p class="cta-note">Sin compromiso • 15 minutos</p>
+                        </div>
+                    </div>
+
+                    <!-- COLUMNA DERECHA: Formulario Mejorado -->
+                    <div class="contact-form-wrapper reveal">
+                        <form id="contactForm" class="contact-form" novalidate>
+
+                            <!-- Honeypot anti-spam (oculto) -->
+                            <div class="form-group honeypot" aria-hidden="true">
+                                <label for="website">Website</label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <div class="form-row grid">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">
+                                        Nombre <span class="required" aria-hidden="true">*</span>
+                                    </label>
+                                    <input type="text" id="name" name="name" class="form-input"
+                                        placeholder="Tu nombre completo" required aria-required="true"
+                                        aria-describedby="name-error" autocomplete="name" minlength="3" maxlength="80">
+                                    <span class="form-error" id="name-error" role="alert"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="form-label">
+                                        Email <span class="required" aria-hidden="true">*</span>
+                                    </label>
+                                    <input type="email" id="email" name="email" class="form-input"
+                                        placeholder="tu@empresa.com" required aria-required="true"
+                                        aria-describedby="email-error" autocomplete="email" inputmode="email">
+                                    <span class="form-error" id="email-error" role="alert"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company" class="form-label">Empresa (opcional)</label>
+                                <input type="text" id="company" name="company" class="form-input"
+                                    placeholder="Nombre de tu empresa" autocomplete="organization" maxlength="80">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="project-type" class="form-label">Tipo de Proyecto</label>
+                                <select id="project-type" name="projectType" class="form-input">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="consultoria">Consultoría Técnica</option>
+                                    <option value="seguros">Proyecto Sector Seguros</option>
+                                    <option value="saas">Desarrollo SaaS</option>
+                                    <option value="ia">IA / Automatización</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">
+                                    Mensaje <span class="required" aria-hidden="true">*</span>
+                                </label>
+                                <textarea id="message" name="message" rows="5" class="form-input"
+                                    placeholder="Cuéntame sobre tu proyecto: objetivos, timeline, presupuesto aproximado..."
+                                    required aria-required="true" minlength="10" maxlength="500"
+                                    aria-describedby="message-error message-counter"></textarea>
+                                <div class="form-footer">
+                                    <span class="form-error" id="message-error" role="alert"></span>
+                                    <span class="char-counter" id="message-counter" aria-live="polite">0/500</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="privacy" required aria-describedby="privacy-error">
+                                    <span class="checkmark" aria-hidden="true"></span>
+                                    <span class="checkbox-text">
+                                        Acepto la <a href="#privacy" target="_blank" rel="noopener">política de
+                                            privacidad</a> y el
+                                        tratamiento de mis datos
+                                    </span>
+                                </label>
+                                <span class="form-error" id="privacy-error" role="alert"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary form-btn" id="submitBtn">
+                                <span class="btn-text">Enviar Mensaje</span>
+                                <i class="fa-regular fa-paper-plane btn-icon"></i>
+                                <span class="btn-loader" style="display: none;">
+                                    <i class="fa-solid fa-spinner fa-spin"></i> Enviando...
+                                </span>
+                            </button>
+
+                            <!-- Success Message (oculta por defecto) -->
+                            <div class="form-success" id="formSuccess" style="display: none;">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <h4>¡Mensaje enviado!</h4>
+                                <p>Te responderé en menos de 24 horas. ¡Gracias por contactarme!</p>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-black py-12 border-t border-gray-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col items-center">
-          <div class="mb-6">
-            <span class="text-2xl font-orbitron gradient-text"
-              >KristiancDev</span
-            >
-          </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container grid">
+                <div class="footer-content">
+                    <a href="#" class="logo footer-logo">Kristianc<span>Dev</span></a>
+                    <p class="footer-desc">Desarrollo e Innovación, automatizacion e IA.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-link" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
 
-          <div class="flex flex-wrap justify-center gap-6 mb-8">
-            <a href="#home" class="text-gray-400 hover:text-white">Inicio</a>
-            <a href="#about" class="text-gray-400 hover:text-white">Sobre mí</a>
-            <a href="#services" class="text-gray-400 hover:text-white"
-              >Servicios</a
-            >
-            <a href="#projects" class="text-gray-400 hover:text-white"
-              >Proyectos</a
-            >
-            <a href="#blog" class="text-gray-400 hover:text-white">Blog</a>
-            <a href="#contact" class="text-gray-400 hover:text-white"
-              >Contacto</a
-            >
-          </div>
+                <div class="footer-links">
+                    <h3 class="footer-title">Enlaces</h3>
+                    <ul>
+                        <li><a href="#about" class="footer-link">Sobre Mí</a></li>
+                        <li><a href="#projects" class="footer-link">Proyectos</a></li>
+                        <li><a href="#services" class="footer-link">Servicios</a></li>
+                    </ul>
+                </div>
+            </div>
 
-          <div class="flex space-x-6 mb-8">
-            <a
-              href="http://github.com/kristiancdev"
-              class="social-icon text-xl text-gray-400 hover:text-blue-400"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/cristiancevallos/"
-              class="social-icon text-xl text-gray-400 hover:text-blue-400"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              href="https://www.tiktok.com/@kristiancdev"
-              class="social-icon text-xl text-gray-400 hover:text-cyan-200"
-            >
-              <i class="fab fa-tiktok"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/kristiancdev/"
-              class="social-icon text-xl text-gray-400 hover:text-pink-400"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-
-          <div class="text-center text-gray-500 text-sm">
-            <p>&copy; 2025 KristiancDev. Todos los derechos reservados.</p>
-            <p class="mt-2">
-              Hecho con <i class="fas fa-heart text-red-500"></i> por
-              KristiancDev
-            </p>
-          </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 KristiancDev. Todos los derechos reservados.</p>
+            </div>
         </div>
-      </div>
     </footer>
 
-    <script>
-      // Mobile menu toggle
-      document
-        .getElementById("mobile-menu-button")
-        .addEventListener("click", function () {
-          const menu = document.getElementById("mobile-menu");
-          menu.classList.toggle("hidden");
-        });
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
 
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          const targetId = this.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
-
-          if (targetElement) {
-            targetElement.scrollIntoView({
-              behavior: "smooth",
-            });
-
-            // Close mobile menu if open
-            const mobileMenu = document.getElementById("mobile-menu");
-            if (!mobileMenu.classList.contains("hidden")) {
-              mobileMenu.classList.add("hidden");
-            }
-          }
-        });
-      });
-
-      // Active nav link on scroll
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll(".nav-link");
-
-      window.addEventListener("scroll", function () {
-        let current = "";
-
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-
-          if (pageYOffset >= sectionTop - 300) {
-            current = section.getAttribute("id");
-          }
-        });
-
-        navLinks.forEach((link) => {
-          link.classList.remove("active", "text-white");
-          link.classList.add("text-gray-300");
-
-          if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active", "text-white");
-            link.classList.remove("text-gray-300");
-          }
-        });
-      });
-
-      // Project filtering
-      const filterButtons = document.querySelectorAll(".filter-btn");
-      const projectCards = document.querySelectorAll(".project-card");
-
-      filterButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-          // Remove active class from all buttons
-          filterButtons.forEach((btn) =>
-            btn.classList.remove("active", "bg-blue-500", "text-white")
-          );
-          filterButtons.forEach((btn) =>
-            btn.classList.add("bg-gray-800", "text-gray-300")
-          );
-
-          // Add active class to clicked button
-          this.classList.add("active", "bg-blue-500", "text-white");
-          this.classList.remove("bg-gray-800", "text-gray-300");
-
-          const filter = this.getAttribute("data-filter");
-
-          projectCards.forEach((card) => {
-            if (
-              filter === "all" ||
-              card.getAttribute("data-category") === filter
-            ) {
-              card.style.display = "block";
-            } else {
-              card.style.display = "none";
-            }
-          });
-        });
-      });
-    </script>
-  </body>
 </html>
