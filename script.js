@@ -193,9 +193,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Inicializar: mostrar todos y actualizar contador al cargar
-    document.addEventListener('DOMContentLoaded', () => {
-        updateFilterCount();
-    });
+    // Document is already in a DOMContentLoaded block here.
+    updateFilterCount();
+
+    /* =======================================
+       Typewriter Effect (Hero Section)
+    ======================================= */
+    const typewriterElement = document.getElementById('typewriter');
+    if (typewriterElement) {
+        const words = ['Desarrollador Full Stack.', 'Especialista en InsurTech.', 'Entusiasta de la IA.'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentWord = words[wordIndex];
+
+            if (isDeleting) {
+                typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50; // Faster deleting
+            } else {
+                typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 120; // Normal typing speed
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at the end of word
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500; // Pause before typing new word
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        // Start typing effect after a small delay
+        setTimeout(type, 1500);
+    }
 
 });
 
@@ -213,7 +252,7 @@ if (messageTextarea && messageCounter) {
     messageTextarea.addEventListener('input', () => {
         const length = messageTextarea.value.length;
         messageCounter.textContent = `${length}/500`;
-        
+
         if (length > 500) {
             messageCounter.style.color = '#ef4444';
         } else {
@@ -231,7 +270,7 @@ const validateEmail = (email) => {
 const showError = (inputId, message) => {
     const input = document.getElementById(inputId);
     const errorSpan = document.getElementById(`${inputId}-error`);
-    
+
     if (input && errorSpan) {
         input.classList.add('error');
         input.classList.remove('success');
@@ -242,7 +281,7 @@ const showError = (inputId, message) => {
 const showSuccess = (inputId) => {
     const input = document.getElementById(inputId);
     const errorSpan = document.getElementById(`${inputId}-error`);
-    
+
     if (input && errorSpan) {
         input.classList.remove('error');
         input.classList.add('success');
@@ -252,7 +291,7 @@ const showSuccess = (inputId) => {
 
 const validateForm = () => {
     let isValid = true;
-    
+
     // Name
     const name = document.getElementById('name').value.trim();
     if (name.length < 3) {
@@ -261,7 +300,7 @@ const validateForm = () => {
     } else {
         showSuccess('name');
     }
-    
+
     // Email
     const email = document.getElementById('email').value.trim();
     if (!validateEmail(email)) {
@@ -270,7 +309,7 @@ const validateForm = () => {
     } else {
         showSuccess('email');
     }
-    
+
     // Message
     const message = messageTextarea.value.trim();
     if (message.length < 10) {
@@ -282,7 +321,7 @@ const validateForm = () => {
     } else {
         showSuccess('message');
     }
-    
+
     // Privacy
     const privacy = document.querySelector('input[name="privacy"]');
     if (!privacy.checked) {
@@ -297,7 +336,7 @@ const validateForm = () => {
             privacyError.textContent = '';
         }
     }
-    
+
     return isValid;
 };
 
@@ -305,22 +344,22 @@ const validateForm = () => {
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         // Validar honeypot (anti-spam)
         const honeypot = document.getElementById('website').value;
         if (honeypot) {
             console.warn('Spam detected');
             return;
         }
-        
+
         if (!validateForm()) {
             return;
         }
-        
+
         // Loading state
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
-        
+
         // Recopilar datos
         const formData = {
             name: document.getElementById('name').value.trim(),
@@ -330,7 +369,7 @@ if (contactForm) {
             message: messageTextarea.value.trim(),
             timestamp: new Date().toISOString()
         };
-        
+
         try {
             // AQUÍ: Integrar con tu backend o servicio (Formspree, EmailJS, etc.)
             // Ejemplo con fetch:
@@ -343,20 +382,20 @@ if (contactForm) {
             
             if (!response.ok) throw new Error('Error al enviar');
             */
-            
+
             // Simular envío (remover en producción)
             await new Promise(resolve => setTimeout(resolve, 1500));
-            
+
             // Success
             contactForm.style.display = 'none';
             formSuccess.style.display = 'block';
-            
+
             // Guardar en localStorage (opcional - para analytics)
             localStorage.setItem('contactFormSubmitted', 'true');
-            
+
             // Reset form
             contactForm.reset();
-            
+
         } catch (error) {
             console.error('Error:', error);
             alert('Hubo un error al enviar el mensaje. Por favor intenta de nuevo o envíame un email directo.');
@@ -365,7 +404,7 @@ if (contactForm) {
             submitBtn.disabled = false;
         }
     });
-    
+
     // Validación en tiempo real
     ['name', 'email', 'message'].forEach(fieldId => {
         const field = document.getElementById(fieldId);
